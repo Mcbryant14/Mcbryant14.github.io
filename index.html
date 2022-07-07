@@ -29,9 +29,12 @@
                 <h1 class="main-heading-text">Matt Bryant.<br> Web Developer.</h1>
                 <!--MAIN CTA BUTTONS-->
                 <div class="button-container">
-                    <a class="heading-cta" href="/about.html"><button class="heading-cta-button">Who am I?</button></a>
+                    <a class="heading-cta"><button class="heading-cta-button" id="aboutmeDiv" onclick="showDetails()">Who am I?</button></a>
                     <a class="heading-cta" href="#"><button class="heading-cta-button">Who are you?</button></a>
                     <a class="heading-cta" href="/mywork.html"><button class="heading-cta-button">See my work</button></a>
+                </div>
+                <div id="hiddenDetails" style="display:none;">
+                    <p class="hiddenBorder">I am a self-taught freelance web developer based out of Richmond, Virginia. I am a husband and a father. Learning is my passion, creating is my hobby.</p>
                 </div>
             </div>
 
@@ -51,11 +54,10 @@
         </div>
 
         </div>
-
+        <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
         <footer class="footer">
             <p>Matthew Bryant, Web Developer</p>
             <script src="script.js"></script>
-            <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
         </footer>
 
      </main>

@@ -87,6 +87,7 @@ h1 {
 
 .main-heading {
     margin-top: 9rem;
+    width: 40%;
 }
 
 .main-heading-text {
@@ -125,13 +126,15 @@ button.heading-cta-button {
 
 .joke-generator {
     margin-top: 2rem;
-    width: 100%;
+    width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
+    height: 300px;
+    justify-content: center;
 }
 
 .joke-heading {
@@ -149,13 +152,26 @@ button.heading-cta-button {
 .joke-output {
     text-align: center;
     font-size: 25px;
+    max-width: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
-    max-width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .output {
     font-size: 25px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+#hiddenDetails {
+    max-width: 74%;
+    margin-top: 2em;
+}
+
+.hiddenBorder {
+    padding: 1rem;
+    border: 5px solid #00AAA9;
+    border-radius: 15px;
 }
