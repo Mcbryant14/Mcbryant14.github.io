@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 16px">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,29 +21,43 @@
      </header>
 
      <main>
+        <!--BACKGROUND IMAGE-->
         <div class="top-container" class="main-image" style="background-image: url(Images/patrick-hendry-37ZuGYD3JOk-unsplash.jpg)";>
+            
+            <!--MAIN PAGE HEADING / LEFT SECTION-->
             <div class="main-heading">
                 <h1 class="main-heading-text">Matt Bryant.<br> Web Developer.</h1>
+                <!--MAIN CTA BUTTONS-->
                 <div class="button-container">
-                    <a class="heading-cta" href="#"><button>Who am I?</button></a>
-                    <a class="heading-cta" href="#"><button>Who are you?</button></a>
-                    <a class="heading-cta" href="#"><button>See my work</button></a>
+                    <a class="heading-cta" href="/about.html"><button class="heading-cta-button">Who am I?</button></a>
+                    <a class="heading-cta" href="#"><button class="heading-cta-button">Who are you?</button></a>
+                    <a class="heading-cta" href="/mywork.html"><button class="heading-cta-button">See my work</button></a>
                 </div>
             </div>
-            <div class=>
-                <!--<img src="Images/matrix code.gif">-->
+
+            <!--MAIN PAGE JOKE GENERATOR / RIGHT SECTION-->
+        <div class="joke-container">
+            <div class="joke-generator">
+                <div class="joke-heading">
+                    <h2>Dad Joke Generator</h2>
+                </div>
+                <div class="joke-output">
+                    <p class="output">Would you like to hear a dad joke?</p>
+                </div>
+                <div class="joke-button">
+                    <button onclick="getRandomJoke()">Generate Joke</button>
+                </div>
             </div>
         </div>
 
-        <div class="">
         </div>
 
         <footer class="footer">
-            <p>test</p>
+            <p>Matthew Bryant, Web Developer</p>
             <script src="script.js"></script>
+            <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
         </footer>
 
      </main>
-    <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
 </body>
 </html>
