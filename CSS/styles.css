@@ -67,5 +67,34 @@ button:hover {
 .top-container{
     display: flex;
     flex-direction: row;
+
 }
 
+.top-container {
+    height: 100vh;
+}
+
+.footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+h1 {
+    font-size: 6em;
+}
+
+.main-heading-text {
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-bottom: 25px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.heading-cta {
+
+}

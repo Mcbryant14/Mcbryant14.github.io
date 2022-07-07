@@ -9,7 +9,7 @@
 </head>
 <body>
 
-Welcome, <?php echo $_POST["name"]!; ?>
+Welcome, <?php echo $_POST["name"]; ?>
 
 </body>
 <footer><script src="script.js"></script></footer>
