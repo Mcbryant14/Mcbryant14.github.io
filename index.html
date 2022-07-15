@@ -22,7 +22,7 @@
 
      <main>
         <!--BACKGROUND IMAGE-->
-        <div class="top-container" class="main-image" style="background-image: url(Images/patrick-hendry-37ZuGYD3JOk-unsplash.jpg)";>
+        <div class="top-container" class="main-image" style="background-image: url(Images/patrick-hendryNEW-37ZuGYD3JOk-unsplash.jpg)";>
             
             <!--MAIN PAGE HEADING / LEFT SECTION-->
             <div class="main-heading">
@@ -30,11 +30,25 @@
                 <!--MAIN CTA BUTTONS-->
                 <div class="button-container">
                     <a class="heading-cta"><button class="heading-cta-button" id="aboutmeDiv" onclick="showDetails()">Who am I?</button></a>
-                    <a class="heading-cta" href="#"><button class="heading-cta-button">Who are you?</button></a>
-                    <a class="heading-cta" href="/mywork.html"><button class="heading-cta-button">See my work</button></a>
+                    <a class="heading-cta" href="#"><button id="secondButton" class="heading-cta-button" onclick="showForm()">Who are you?</button></a>
+                    <a class="heading-cta" href="/mywork.html"><button id="thirdButton" class="heading-cta-button">See my work</button></a>
                 </div>
+                <!--Hidden paragraph 1st button-->
                 <div id="hiddenDetails" style="display:none;">
                     <p class="hiddenBorder">I am a self-taught freelance web developer based out of Richmond, Virginia. I am a husband and a father. Learning is my passion, creating is my hobby.</p>
+                </div>
+                <!--Hidden form second button-->
+                <div id="hiddenForm" style="display:none;">
+                    <form id="myForm" name="form1" action="">
+                        Name: <input type="text" name="name" class="input-main">
+                        <input id="btn-main" type="submit" value="submit">
+                    </form>
+                </div>
+                <!--Hidden div appears after form submit second button-->
+                <div id="hiddenFormResults">
+                    <h3 class="helloHeadline">Hello, Friend!</h3>
+                    <p>I hope you enjoy my website.</p>
+                    <p id="timeDate"></p>
                 </div>
             </div>
 
@@ -54,7 +68,7 @@
         </div>
 
         </div>
-        <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+        <!--<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>-->
         <footer class="footer">
             <p>Matthew Bryant, Web Developer</p>
             <script src="script.js"></script>

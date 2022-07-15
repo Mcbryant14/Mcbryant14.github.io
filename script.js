@@ -18,17 +18,33 @@ const jokes = [
     "Want to know why nurses like red crayons? Sometimes they have to draw blood."
 ];
 
-function getRandomJoke(){
+let prevNumber = 0;
+
+function getRandomJoke() {
     //gets random index value
     let number = Math.floor(Math.random() * (jokes.length));
     //get array value
     let joke = jokes[number];
-    const el = document.querySelector(".joke-output");
-    el.innerHTML = joke;
+    if (number != prevNumber){
+        const jokeDisplay = document.querySelector(".joke-output");
+        jokeDisplay.innerHTML = joke;
+    } else {
+        getRandomJoke();
+    }
+    prevNumber = number;
 }
 
+const firstButton = document.getElementById('aboutmeDiv');
+const secondButton = document.getElementById('secondButton');
+const thirdButton = document.getElementById('thirdButton');
+const myHiddenBio = document.getElementById('hiddenDetails');
+const hiddenSubmitForm = document.getElementById('hiddenForm');
+const hiddenSubmitDetails = document.getElementById('hiddenFormResults');
 
+/*show/hide "Who am I" button*/
 function showDetails(){
+    hiddenSubmitForm.style.display = "none";
+    hiddenSubmitDetails.style.display = "none";
     var x = document.getElementById('hiddenDetails');
     if (x.style.display === "none") {
         x.style.display = "block";
@@ -37,4 +53,51 @@ function showDetails(){
     }
 }
 
+/*show/hide "Who are you" button*/
+function showForm() {
+    myHiddenBio.style.display = "none";
+    if (hiddenSubmitDetails.style.display === "none") {
+        hiddenSubmitDetails.style.display = "block";
+    } else {
+        hiddenSubmitDetails.style.display = "none";
+    }
+    var x = document.getElementById('hiddenForm');
+    if (x.style.display === "none") {
+        x.style.display = "flex";
+        x.className = "formStyles";
+    } else {
+        x.style.display = "none";
+    }
+}
 
+/*action to do when submit name*/
+const submitButton = document.getElementById('btn-main');
+
+submitButton.addEventListener('click', () => {
+    //save input and headline to variables
+    const input = document.querySelector('.input-main');
+    const headline = document.querySelector('.helloHeadline');
+    const formDetails = document.querySelector('#hiddenFormResults');
+    const secondPar = document.querySelector('#timeDate');
+    let time = new Date();
+    //use input value to replace headline
+        if (formDetails.style.display === "none") {
+            formDetails.style.display = "block";
+        } else {formDetails.style.display = "none";
+        }
+        headline.textContent = `Hello, ${input.value}!`;
+        secondPar.innerHTML = `It is ${time}.`;
+  });
+
+/*button.addEventListener('keypress', function (e) {
+    const input = document.querySelector('.input-main');
+    const headline = document.querySelector('.helloHeadline');
+    const formDetails = document.querySelector('#hiddenFormResults');
+        if (e.key === 'Enter') {
+            headline.textContent = input.value;
+            if (formDetails.style.display === "none") {
+                formDetails.style.display = "block";
+            } else {formDetails.style.display = "none";
+            }
+        }   
+  });*/
