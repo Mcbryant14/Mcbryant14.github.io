@@ -25,6 +25,7 @@
         <div class="top-container" class="main-image" style="background-image: url(Images/patrick-hendryNEW-37ZuGYD3JOk-unsplash.jpg)";>
             
             <!--MAIN PAGE HEADING / LEFT SECTION-->
+        <div class="main-content-wrapper">
             <div class="main-heading">
                 <h1 class="main-heading-text">Matt Bryant.<br> Web Developer.</h1>
                 <!--MAIN CTA BUTTONS-->
@@ -45,12 +46,13 @@
                     </form>
                 </div>
                 <!--Hidden div appears after form submit second button-->
-                <div id="hiddenFormResults">
+                <div id="hiddenFormResults" style="display:none;">
                     <h3 class="helloHeadline">Hello, Friend!</h3>
                     <p>I hope you enjoy my website.</p>
                     <p id="timeDate"></p>
                 </div>
             </div>
+        
 
             <!--MAIN PAGE JOKE GENERATOR / RIGHT SECTION-->
         <div class="joke-container">
@@ -61,13 +63,18 @@
                 <div class="joke-output">
                     <p class="output">Would you like to hear a dad joke?</p>
                 </div>
-                <div class="joke-button">
-                    <button onclick="getRandomJoke()">Generate Joke</button>
-                </div>
+                <div class="joke-button-container">
+                    <div class="joke-button">
+                        <button onclick="getRandomJoke()">Generate Joke</button>
+                    </div>
+                    <div class="joke-button">
+                        <button id="show-punch">Show Punchline</button>
+                    </div>
             </div>
         </div>
+    </div>
 
-        </div>
+</div>
         <!--<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>-->
         <footer class="footer">
             <p>Matthew Bryant, Web Developer</p>
