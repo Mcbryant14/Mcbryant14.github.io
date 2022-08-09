@@ -3,6 +3,17 @@ document.querySelector('.cta').addEventListener('click', function() {
     alert("Contact information coming soon!");
 });
 
+//navbar collapse
+
+const navLinks = document.querySelector('.nav_links');
+const navButton = document.querySelector('.hamburger');
+const header = document.querySelector('.header');
+
+navButton.addEventListener('click', () => {
+    header.classList.toggle('header-toggle');
+    navLinks.classList.toggle('navbar-visible');
+});
+
 /*Joke Generator*/
 //Array
 const jokes = [
@@ -56,8 +67,10 @@ function getRandomJoke() {
 
 //Punchline function
 
+const punchOutput = document.querySelector(".punchline-output");
+
 punchButton.addEventListener('click', () => {
-    document.querySelector(".joke-output").innerHTML = (punches[prevNumber]);
+        document.querySelector(".punchline-output").innerHTML = (punches[prevNumber]);
 });
 
 

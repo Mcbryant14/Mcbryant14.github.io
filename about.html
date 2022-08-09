@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Bryant</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <!--Header and Nav Bar-->
-     <header>
-         <img class="logo" src="Images/logo.png" alt="logo">
-         <nav class="main-navigation">
+
+<body class="homepage">
+    <header class="header">
+        <img class="logo" src="Images/logo.png" alt="logo">
+        <nav class="main-navigation">
             <ul class="nav_links">
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="/about.html">About Me</a></li>
                 <li><a href="/mywork.html">My Work</a></li>
             </ul>
          </nav>
-         <a class="cta" href="#"><button>Contact Me</button></a>
+         <a class="cta contact-button" href="#"><button>Contact Me</button></a>
+         <button class="hamburger">
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+         </button>
      </header>
+
      <main>
         <h1>Who am I?</h1>
         <p>I am a self-taught freelance web developer based out of Richmond, Virginia. Learning is my passion, creating is my hobby.</p>
@@ -33,6 +41,9 @@
     -->
      </div>
     <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
-    <footer><script src="script.js"></script></footer>
+    <footer class="footer">
+        <p>Matthew Bryant, Web Developer</p>
+        <script src="script.js"></script>
+    </footer>
 </body>
 </html>

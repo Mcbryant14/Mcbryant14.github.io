@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/*Whole Site*/
+/* Whole Site */
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
 
 * {
     box-sizing: border-box;
@@ -10,7 +15,7 @@
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 45px;
 }
 
 button {
@@ -24,10 +29,12 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0,136,169,0.8)
+    background-color: rgba(0,136,169,0.8);
+    cursor: pointer;
 }
 
-/*NAVIGATION*/
+
+/* NAVIGATION */
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -42,7 +49,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: black
+    background-color: black;
+    height: 83px;
+    transition: all 1s ease;
+}
+
+.header-toggle {
+    height: 150px!important;
 }
 
 .logo {
@@ -52,6 +65,8 @@ header {
 
 .nav_links {
     list-style: none;
+    display: none;
+    transition: all 1s ease;
 }
 
 .nav_links li {
@@ -68,7 +83,35 @@ header {
     color: #00AAA9;
 }
 
-/*Front Page*/
+.main-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.contact-button {
+    display: none;
+}
+
+.nav_links > li {
+    margin: .5em auto;
+}
+
+.navbar-visible {
+    display: flex !important;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    transition: all 1s ease;}
+
+/* Front Page */
+
+body {
+    background-image: url("Images/patrick-hendry-37ZuGYD3JOk-unsplash.jpg");
+    height: 100%;
+    width: 100%;
+}
 
 .hero {
     background-image: url("https://www.canva.com/design/DAFBn_3itBw/ZtNEy85H-oBCCmagbfjBxQ/watch?utm_content=DAFBn_3itBw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel");
@@ -83,17 +126,19 @@ body > main > div {
 }
 
 .main-content-wrapper{
-    position: relative;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
+    height: 100vh;
 }
 
 .main-heading {
-    margin-top: 9rem;
-    width: 40%;
+    width: 90%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .main-heading-text {
@@ -102,34 +147,37 @@ body > main > div {
     margin-bottom: 25px;
 }
 
-/*(main buttons on home)*/
+/* (main buttons on home) */
 .button-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 .heading-cta {
-    width: 30%
+    width: 25%;
 }
 
 a.heading-cta {
     flex-grow: 1;
     flex: 1;
-    text-align: center;
+    text-align: start;
 }
 
 button.heading-cta-button {
-    min-width: 90%;
+    min-width: 150px;
 }
 
-/*First Button*/
+/* First Button */
 
 #hiddenDetails {
-    max-width: 74%;
+    max-width: 100%;
     margin-top: 2em;
+    background-image: linear-gradient(45deg, gray, black);
+    border-radius: 15px;
+    display: none;
 }
 
 .hiddenBorder {
@@ -142,7 +190,7 @@ button.heading-cta-button {
     color: white;
 }
 
-/*Second Button*/
+/* Second Button */
 
 #hiddenForm {
     margin: 1.5em;
@@ -152,24 +200,23 @@ button.heading-cta-button {
     display: none;
 }
 
-/*Right section of homepage (joke generator)*/
+/* Right section of homepage (joke generator) */
 
 .joke-container {
-    margin-right: 3rem;
-    margin-top: 9rem;
+    margin: 0 auto;
 }
 
 .joke-generator {
-    margin-top: 2rem;
-    width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2rem auto 3rem;
     padding: 10px;
     border: 1px solid black;
     border-radius: 25px;
     height: 300px;
-    justify-content: center;
     background-color: rgba(189, 195, 199, 1);
 }
 
@@ -191,23 +238,38 @@ button.heading-cta-button {
     text-align: center;
 }
 
+.joke-button button {
+    font-size: 14px;
+}
+
 .joke-output {
-    text-align: center;
-    font-size: 25px;
-    max-width: 500px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 100px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    /*max-width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100px;*/
 }
 
 .output {
     font-size: 25px;
     max-width: 500px;
 }
+.output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/*PORTFOLIO PAGE*/
+.punchline-output {
+    display: none;
+}
+
+/* PORTFOLIO PAGE */
 
 .portfolio-image-main-container {
     display: flex;
@@ -233,11 +295,51 @@ button.heading-cta-button {
 
 
 .footer {
-    display: none;
-    /*position: sticky;
+    text-align: center;
+    position: sticky;
     bottom: 0;
     height: 50px;
     background-color: black;
     color: white;
     width: 100%;*/
 }
+
+/* Media Queries */
+
+@media screen and (min-width: 300px) {
+    .second-cta {display: none;}
+}
+
+@media screen and (min-width: 500px) {
+    .second-cta {display: initial;}
+}
+
+@media screen and (max-width: 800px) {
+    .main-navigation {flex-direction: column;}
+}
+
+@media screen and (min-width: 800px) {
+    .hamburger {display: none;}
+    .contact-button {display: block;}
+    .nav_links {display: flex;}
+}
+
+.fa-solid .fa-bars {
+    color: white;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

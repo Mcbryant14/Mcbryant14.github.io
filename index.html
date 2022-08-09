@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 16px">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Bryant</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-     <header>
-         <img class="logo" src="Images/logo.png" alt="logo">
-         <nav class="main-navigation">
+
+<body class="homepage">
+    <header class="header">
+        <img class="logo" src="Images/logo.png" alt="logo">
+        <nav class="main-navigation">
             <ul class="nav_links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="/about.html">About Me</a></li>
                 <li><a href="/mywork.html">My Work</a></li>
             </ul>
          </nav>
-         <a class="cta" href="#"><button>Contact Me</button></a>
+         <a class="cta contact-button" href="#"><button>Contact Me</button></a>
+         <button class="hamburger">
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+         </button>
      </header>
 
-     <main>
+<main>
         <!--BACKGROUND IMAGE-->
         <div class="top-container" class="main-image" style="background-image: url(Images/patrick-hendryNEW-37ZuGYD3JOk-unsplash.jpg)";>
             
             <!--MAIN PAGE HEADING / LEFT SECTION-->
         <div class="main-content-wrapper">
-            <div class="main-heading">
+            <section class="main-heading">
                 <h1 class="main-heading-text">Matt Bryant.<br> Web Developer.</h1>
                 <!--MAIN CTA BUTTONS-->
                 <div class="button-container">
-                    <a class="heading-cta"><button class="heading-cta-button" id="aboutmeDiv" onclick="showDetails()">Who am I?</button></a>
-                    <a class="heading-cta" href="#"><button id="secondButton" class="heading-cta-button" onclick="showForm()">Who are you?</button></a>
+                    <a class="heading-cta"><button class="heading-cta-button" id="aboutmeDiv" onclick="showDetails()">About Me</button></a>
+                    <a class="heading-cta second-cta" href="#"><button id="secondButton" class="heading-cta-button" onclick="showForm()">Who are you?</button></a>
                     <a class="heading-cta" href="/mywork.html"><button id="thirdButton" class="heading-cta-button">See my work</button></a>
                 </div>
                 <!--Hidden paragraph 1st button-->
@@ -51,36 +59,41 @@
                     <p>I hope you enjoy my website.</p>
                     <p id="timeDate"></p>
                 </div>
-            </div>
+            </section>
         
-
             <!--MAIN PAGE JOKE GENERATOR / RIGHT SECTION-->
-        <div class="joke-container">
-            <div class="joke-generator">
-                <div class="joke-heading">
-                    <h2>Dad Joke Generator</h2>
-                </div>
+    <section class="joke-container">
+        <div class="joke-generator">
+            <div class="joke-heading">
+                <h2>Dad Joke Generator</h2>
+            </div>
+            <div class="output-container">
                 <div class="joke-output">
                     <p class="output">Would you like to hear a dad joke?</p>
                 </div>
-                <div class="joke-button-container">
-                    <div class="joke-button">
-                        <button onclick="getRandomJoke()">Generate Joke</button>
-                    </div>
-                    <div class="joke-button">
-                        <button id="show-punch">Show Punchline</button>
-                    </div>
+            </div>
+            <div class="punchline-output">
+                    <p class="punchlineText"></p>
+            </div>
+            <div class="joke-button-container">
+                <div class="joke-button">
+                    <button onclick="getRandomJoke()">Generate Joke</button>
+                </div>
+                <div class="joke-button">
+                    <button id="show-punch">Show Punchline</button>
+                </div>
             </div>
         </div>
-    </div>
-
-</div>
+    </section>
+        </div>
+        </div>
+</main>
         <!--<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>-->
         <footer class="footer">
             <p>Matthew Bryant, Web Developer</p>
             <script src="script.js"></script>
         </footer>
 
-     </main>
 </body>
+
 </html>
