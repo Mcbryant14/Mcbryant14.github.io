@@ -1,21 +1,30 @@
-/*Alert for contact information*/
-document.querySelector('.cta').addEventListener('click', function() {
-    alert("Contact information coming soon!");
-});
+/******************
+ * GLOBAL VARIABLES
+ ******************/
 
+//Generator function
+let prevNumber = 0;
+const generateJokeButton = document.getElementById('generateButton');
+const punchButton = document.getElementById('show-punch');
+const punchOutput = document.querySelector(".punchline-output");
+//Main Page Buttons
+const firstButton = document.getElementById('aboutmeDiv');
+const secondButton = document.getElementById('secondButton');
+const thirdButton = document.getElementById('thirdButton');
+const myHiddenBio = document.getElementById('hiddenDetails');
+const hiddenSubmitForm = document.getElementById('hiddenForm');
+const hiddenSubmitDetails = document.getElementById('hiddenFormResults');
+const submitButton = document.getElementById('btn-main')
 //navbar collapse
-
 const navLinks = document.querySelector('.nav_links');
 const navButton = document.querySelector('.hamburger');
 const header = document.querySelector('.header');
 
-navButton.addEventListener('click', () => {
-    header.classList.toggle('header-toggle');
-    navLinks.classList.toggle('navbar-visible');
-});
+/******************
+ * ARRAYS
+ ******************/
 
 /*Joke Generator*/
-//Array
 const jokes = [
     "I'm afraid for the calendar.",
     "My wife said I should do lunges to stay in shape.",
@@ -29,7 +38,7 @@ const jokes = [
     "What kind of drink can be bitter and sweet?",
     "Want to know why nurses like red crayons?"
 ];
-
+/*punchlines*/
 const punches = [
     "Its days are numbered.",
     "That would be a big step forward.",
@@ -44,10 +53,21 @@ const punches = [
     "Sometimes they have to draw blood."
 ];
 
-const punchButton = document.getElementById('show-punch');
+/******************
+ * FUNCTIONS
+ ******************/
 
-//Generator function
-let prevNumber = 0;
+/*Alert for contact information*/
+document.querySelector('.cta').addEventListener('click', function() {
+    alert("Contact information coming soon!");
+});
+
+navButton.addEventListener('click', () => {
+    header.classList.toggle('header-toggle');
+    navLinks.classList.toggle('navbar-visible');
+});
+
+// Get random joke function
 
 function getRandomJoke() {
     //gets random index value
@@ -63,26 +83,25 @@ function getRandomJoke() {
     prevNumber = number;
 }
 
+// Show/hide punchline function
 
+function hidePunchline() {
+    if (punchOutput.style.display == 'flex') {
+        punchOutput.style.display = 'none';
+    }
+}
 
-//Punchline function
-
-const punchOutput = document.querySelector(".punchline-output");
-
-punchButton.addEventListener('click', () => {
-        document.querySelector(".punchline-output").innerHTML = (punches[prevNumber]);
+generateJokeButton.addEventListener('click', () => {
+    getRandomJoke();
+    hidePunchline();
 });
 
+// Function on click show punchline update punchline output to new punchline
 
-/*Main Page Buttons*/
-
-const firstButton = document.getElementById('aboutmeDiv');
-const secondButton = document.getElementById('secondButton');
-const thirdButton = document.getElementById('thirdButton');
-const myHiddenBio = document.getElementById('hiddenDetails');
-const hiddenSubmitForm = document.getElementById('hiddenForm');
-const hiddenSubmitDetails = document.getElementById('hiddenFormResults');
-const submitButton = document.getElementById('btn-main')
+punchButton.addEventListener('click', () => {
+        punchOutput.style.display = 'flex';
+        punchOutput.innerHTML = punches[prevNumber];
+});
 
 //First Button Events
 
@@ -131,69 +150,3 @@ submitButton.addEventListener('click', () => {
         headline.textContent = `Hello, ${input.value || "friend"}!`;
         secondPar.innerHTML = `It is ${time}.`;
     });
-
-    //when I click submit button, everything is display: none
-
-    //if form details are displayed, display: none the form itself
-
-
-/*function showDetails(){
-    hiddenSubmitForm.style.display = "none";
-    hiddenSubmitDetails.style.display = "none";
-var x = document.getElementById('hiddenDetails');
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}*/
-
-
-/*show/hide "Who are you" button*/
-/*function showForm() {
-    myHiddenBio.style.display = "none";
-    if (hiddenSubmitDetails.style.display === "none") {
-        hiddenSubmitDetails.style.display = "block";
-    } else {
-        hiddenSubmitDetails.style.display = "none";
-    }
-    var x = document.getElementById('hiddenForm');
-    if (x.style.display === "none") {
-        x.style.display = "flex";
-        x.className = "formStyles";
-    } else {
-        x.style.display = "none";
-    }
-}*/
-
-/*action to do when submit name*/
-/*const submitButton = document.getElementById('btn-main');
-
-submitButton.addEventListener('click', () => {
-    //save input and headline to variables
-    const input = document.querySelector('.input-main');
-    const headline = document.querySelector('.helloHeadline');
-    const formDetails = document.querySelector('#hiddenFormResults');
-    const secondPar = document.querySelector('#timeDate');
-    let time = new Date();
-    //use input value to replace headline
-        if (formDetails.style.display === "none") {
-            formDetails.style.display = "block";
-        } else {formDetails.style.display = "none";
-        }
-        headline.textContent = `Hello, ${input.value}!`;
-        secondPar.innerHTML = `It is ${time}.`;
-  });*/
-
-/*button.addEventListener('keypress', function (e) {
-    const input = document.querySelector('.input-main');
-    const headline = document.querySelector('.helloHeadline');
-    const formDetails = document.querySelector('#hiddenFormResults');
-        if (e.key === 'Enter') {
-            headline.textContent = input.value;
-            if (formDetails.style.display === "none") {
-                formDetails.style.display = "block";
-            } else {formDetails.style.display = "none";
-            }
-        }   
-  });*/
