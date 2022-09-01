@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/* Whole Site */
+/*****************
+    WHOLE SITE
+******************/
+
+.all-wrapper {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Images/patrick-hendryNEW-37ZuGYD3JOk-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
 
 html {
     font-size: 16px;
@@ -11,7 +22,6 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /*background-color: black;*/
 }
 
 h1 {
@@ -33,8 +43,14 @@ button:hover {
     cursor: pointer;
 }
 
+button:active {
+    background-color: #00AAA9;
+}
 
-/* NAVIGATION */
+
+/*****************
+    NAVIGATION
+******************/
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -105,7 +121,9 @@ header {
     justify-content: center;
     transition: all 1s ease;}
 
-/* Front Page */
+/*****************
+    FRONT PAGE
+******************/
 
 body {
     background-image: url("Images/patrick-hendry-37ZuGYD3JOk-unsplash.jpg");
@@ -131,11 +149,12 @@ body > main > div {
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-    height: 100vh;
+    width: 95%;
+    margin: auto;
 }
 
 .main-heading {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     
@@ -147,31 +166,38 @@ body > main > div {
     margin-bottom: 25px;
 }
 
-/* (main buttons on home) */
+/* FRONT PAGE BUTTONS */
+
+/* primary buttons */
+
 .button-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
+    gap: 12px;
 }
+
+/*.button-container a {
+    width: 100%;
+}*/
 
 .heading-cta {
-    width: 25%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-a.heading-cta {
-    flex-grow: 1;
-    flex: 1;
-    text-align: start;
+
+.heading-cta button {
+    width: 90%;
+    min-width: 100px;
 }
 
-button.heading-cta-button {
-    min-width: 150px;
+#secondButton {
+    display: none;
 }
 
-/* First Button */
-
+/* hidden */
 #hiddenDetails {
     max-width: 100%;
     margin-top: 2em;
@@ -190,10 +216,9 @@ button.heading-cta-button {
     color: white;
 }
 
-/* Second Button */
-
 #hiddenForm {
     margin: 1.5em;
+    display: none;
 }
 
 #hiddenFormResults {
@@ -204,6 +229,7 @@ button.heading-cta-button {
 
 .joke-container {
     margin: 0 auto;
+    width: 100%;
 }
 
 .joke-generator {
@@ -212,6 +238,7 @@ button.heading-cta-button {
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    max-width: 500px;
     margin: 2rem auto 3rem;
     padding: 10px;
     border: 1px solid black;
@@ -232,6 +259,7 @@ button.heading-cta-button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 5px;
 }
 
 .joke-button {
@@ -249,10 +277,6 @@ button.heading-cta-button {
     justify-content: center;
     text-align: center;
     font-size: 25px;
-    /*max-width: 500px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 100px;*/
 }
 
 .output {
@@ -269,7 +293,9 @@ button.heading-cta-button {
     display: none;
 }
 
-/* PORTFOLIO PAGE */
+/*****************
+   PORTFOLIO PAGE
+******************/
 
 .portfolio-image-main-container {
     display: flex;
@@ -304,14 +330,33 @@ button.heading-cta-button {
     width: 100%;*/
 }
 
-/* Media Queries */
+
+/*****************
+    MEDIA QUERIES
+******************/
 
 @media screen and (min-width: 300px) {
     .second-cta {display: none;}
+    .heading-cta {width: 100%;}
+    .heading-cta button {width: 95%;}
 }
 
-@media screen and (min-width: 500px) {
-    .second-cta {display: initial;}
+@media screen and (max-width: 342px) {
+    .heading-cta button {width: 95%;}
+}
+
+@media screen and (min-width: 400px) {
+    .heading-cta {justify-content: left;}
+    .heading-cta button {width: 200px;}
+    .main-heading-text {font-size: 52px;}
+    .button-container {flex-direction: row;}
+    .heading-cta {width: auto;}
+}
+
+@media screen and (min-width: 650px) {
+    .main-heading-text {font-size: 57px;}
+    .main-heading {align-items: center;}
+    .main-heading-text {margin-right: 2em;}
 }
 
 @media screen and (max-width: 800px) {
@@ -322,7 +367,15 @@ button.heading-cta-button {
     .hamburger {display: none;}
     .contact-button {display: block;}
     .nav_links {display: flex;}
+    .main-content-wrapper{flex-wrap: nowrap; padding-top: 4rem;}
+    .main-heading-text {font-size: 70px;}
 }
+
+@media screen and (min-width: 1500px) {
+    .main-content-wrapper{padding-top: 7rem;}
+    .main-heading-text {font-size: 90px;}
+}
+
 
 .fa-solid .fa-bars {
     color: white;
