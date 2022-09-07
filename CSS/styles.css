@@ -18,6 +18,15 @@ html {
     height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -120,6 +129,15 @@ header {
     align-content: center;
     justify-content: center;
     transition: all 1s ease;}
+
+
+/*****************
+    FOOTER
+******************/
+
+footer {
+   display: none;
+}
 
 /*****************
     FRONT PAGE
@@ -298,7 +316,30 @@ body > main > div {
 ******************/
 
 .portfolio-image-main-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 345px));
+    grid-template-rows: 300px 300px;
+    justify-content: center;
+    gap: 10px;
+    grid-auto-columns: 1fr;
+    padding: 1rem;
+    background-color: #B9B9B9;
+}
+
+.portfolio-image-cont img {
+    transition: all .4s ease;
+}
+
+.portfolio-image-cont img:hover {
+    transform: scale(1.04);
+}
+
+.portfolio-image-main-container > div {
+    width: 100%;
+}
+
+.portfolio-image {
+    border-radius: 15px;
 }
 
 .portfolio-image-cont {
@@ -312,6 +353,10 @@ body > main > div {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.portfolio-image img {
+    width: 300px;
 }
 
 .formStyles {

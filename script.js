@@ -19,6 +19,8 @@ const submitButton = document.getElementById('btn-main')
 const navLinks = document.querySelector('.nav_links');
 const navButton = document.querySelector('.hamburger');
 const header = document.querySelector('.header');
+//other
+const westchesterDiv = document.querySelector('#westchester > img');
 
 /******************
  * ARRAYS
@@ -118,6 +120,7 @@ firstButton.addEventListener('click', () => {
     }
 });
 
+
 //if the form details are visible and about me is clicked, hide form details
 
 /*
@@ -156,3 +159,8 @@ submitButton.addEventListener('click', () => {
     });
 
     */
+
+
+
+
+
