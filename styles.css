@@ -423,6 +423,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 110px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#logo {
+    padding: 5px;
 }
 
 nav > ul {
@@ -440,6 +446,8 @@ nav > ul li {
     padding: 10px;
     border: 1px solid var(--main-bg-color);
     border-radius: 3px;
+    min-width: 110px;
+    text-align: center;
 }
 
 #contact-button {
@@ -458,6 +466,57 @@ footer {
 dev.index.html
 ******************/
 
+#main-home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-containers {
+    width: 50%;
+}
+
+#left-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#headshot {
+    border-radius: 100px;
+    margin-left: 20%;
+    margin-top: 5%;
+    order: 1;
+}
+
+/*typing cursor*/
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 0;
+}
+
+.typing-container * {
+color: white;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
 
 
 
