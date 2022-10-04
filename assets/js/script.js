@@ -121,46 +121,9 @@ firstButton.addEventListener('click', () => {
 });
 
 
-//if the form details are visible and about me is clicked, hide form details
-
-/*
-
-//Second Button Events
-
-secondButton.addEventListener('click', () => {
-    if (hiddenSubmitForm.style.display == 'none') {
-        hiddenSubmitForm.style.display = 'block';
-        myHiddenBio.style.display = 'none';
-    } else {
-        hiddenSubmitForm.style.display = 'none';
-    }
-});
-
-//Click submit button event
-
-submitButton.addEventListener('click', () => {
-// when click submit, hide form and show details
-    hiddenSubmitForm.style.display = 'none';
-    hiddenSubmitDetails.style.display = 'block';
-    //save input and headline to variables
-    const input = document.querySelector('.input-main');
-    const headline = document.querySelector('.helloHeadline');
-    //const formResults = document.querySelector('#hiddenFormResults');
-    const secondPar = document.querySelector('#timeDate');
-    let time = new Date();
-    //use input value to replace headline
-        if (hiddenSubmitDetails.style.display === "none") {
-            hiddenSubmitDetails.style.display = "block";
-        } else {
-            hiddenSubmitDetails.style.display = "none";
-        }
-        headline.textContent = `Hello, ${input.value || "friend"}!`;
-        secondPar.innerHTML = `It is ${time}.`;
-    });
-
-    */
-
-
+/******************
+ *    jquery
+ ******************/
 
 
 

@@ -1,0 +1,44 @@
+/*****************
+    MEDIA QUERIES
+******************/
+
+@media screen and (min-width: 300px) {
+    .second-cta {display: none;}
+    .heading-cta {width: 100%;}
+    .heading-cta button {width: 95%;}
+}
+
+@media screen and (max-width: 342px) {
+    .heading-cta button {width: 95%;}
+}
+
+@media screen and (min-width: 400px) {
+    .heading-cta {justify-content: left;}
+    .heading-cta button {width: 200px;}
+    .main-heading-text {font-size: 52px;}
+    .button-container {flex-direction: row;}
+    .heading-cta {width: auto;}
+}
+
+@media screen and (min-width: 650px) {
+    .main-heading-text {font-size: 57px;}
+    .main-heading {align-items: center;}
+    .main-heading-text {margin-right: 2em;}
+}
+
+@media screen and (max-width: 800px) {
+    .main-navigation {flex-direction: column;}
+}
+
+@media screen and (min-width: 800px) {
+    .hamburger {display: none;}
+    .contact-button {display: block;}
+    .nav_links {display: flex;}
+    .main-content-wrapper{flex-wrap: nowrap; padding-top: 4rem;}
+    .main-heading-text {font-size: 70px;}
+}
+
+@media screen and (min-width: 1500px) {
+    .main-content-wrapper{padding-top: 7rem;}
+    .main-heading-text {font-size: 90px;}
+}

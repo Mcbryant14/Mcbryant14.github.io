@@ -2,7 +2,7 @@
 
 /*****************
     WHOLE SITE
-******************/
+*****************
 
 .all-wrapper {
     margin: auto;
@@ -59,7 +59,7 @@ button:active {
 
 /*****************
     NAVIGATION
-******************/
+*****************
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -133,7 +133,7 @@ header {
 
 /*****************
     FOOTER
-******************/
+*****************
 
 footer {
    display: none;
@@ -141,7 +141,7 @@ footer {
 
 /*****************
     FRONT PAGE
-******************/
+*****************
 
 body {
     background-image: url("Images/patrick-hendry-37ZuGYD3JOk-unsplash.jpg");
@@ -186,7 +186,7 @@ body > main > div {
 
 /* FRONT PAGE BUTTONS */
 
-/* primary buttons */
+/* primary buttons 
 
 .button-container {
     display: flex;
@@ -197,7 +197,7 @@ body > main > div {
 
 /*.button-container a {
     width: 100%;
-}*/
+}
 
 .heading-cta {
     display: flex;
@@ -215,7 +215,7 @@ body > main > div {
     display: none;
 }
 
-/* hidden */
+/* hidden 
 #hiddenDetails {
     max-width: 100%;
     margin-top: 2em;
@@ -243,7 +243,7 @@ body > main > div {
     display: none;
 }
 
-/* Right section of homepage (joke generator) */
+/* Right section of homepage (joke generator) 
 
 .joke-container {
     margin: 0 auto;
@@ -313,7 +313,7 @@ body > main > div {
 
 /*****************
    PORTFOLIO PAGE
-******************/
+*****************
 
 .portfolio-image-main-container {
     display: grid;
@@ -372,61 +372,91 @@ body > main > div {
     height: 50px;
     background-color: black;
     color: white;
-    width: 100%;*/
+    width: 100%;
 }
-
-
-/*****************
-    MEDIA QUERIES
-******************/
-
-@media screen and (min-width: 300px) {
-    .second-cta {display: none;}
-    .heading-cta {width: 100%;}
-    .heading-cta button {width: 95%;}
-}
-
-@media screen and (max-width: 342px) {
-    .heading-cta button {width: 95%;}
-}
-
-@media screen and (min-width: 400px) {
-    .heading-cta {justify-content: left;}
-    .heading-cta button {width: 200px;}
-    .main-heading-text {font-size: 52px;}
-    .button-container {flex-direction: row;}
-    .heading-cta {width: auto;}
-}
-
-@media screen and (min-width: 650px) {
-    .main-heading-text {font-size: 57px;}
-    .main-heading {align-items: center;}
-    .main-heading-text {margin-right: 2em;}
-}
-
-@media screen and (max-width: 800px) {
-    .main-navigation {flex-direction: column;}
-}
-
-@media screen and (min-width: 800px) {
-    .hamburger {display: none;}
-    .contact-button {display: block;}
-    .nav_links {display: flex;}
-    .main-content-wrapper{flex-wrap: nowrap; padding-top: 4rem;}
-    .main-heading-text {font-size: 70px;}
-}
-
-@media screen and (min-width: 1500px) {
-    .main-content-wrapper{padding-top: 7rem;}
-    .main-heading-text {font-size: 90px;}
-}
-
 
 .fa-solid .fa-bars {
     color: white;
     height: 50px;
 }
 
+/*****************
+Variables
+*****************/
+
+:root {
+    --main-bg-color: #FAF8FF;
+    --main-dark-accent: #181818;
+    --accent-one: #8685EF;
+    --accent-two: #D3FBD8;
+}
+
+
+/*****************
+Global Styles
+******************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a:-webkit-any-link {
+    color: unset;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--main-dark-accent);
+    height: 50vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    list-style-type: none;
+    padding-right: 25px;
+}
+
+nav > ul li {
+    color: var(--main-bg-color);
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 3px;
+}
+
+#contact-button {
+    background-color: var(--accent-one);
+}
+
+#logo {
+    height: 100px;
+}
+
+footer {
+    display: none;
+}
+
+/*****************
+dev.index.html
+******************/
 
 
 
