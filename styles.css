@@ -441,13 +441,33 @@ nav > ul {
 }
 
 nav > ul li {
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+
+.normal-button, .special-button {
     color: var(--main-bg-color);
-    text-decoration: none;
-    padding: 10px;
     border: 1px solid var(--main-bg-color);
     border-radius: 3px;
     min-width: 110px;
+    max-width: 150px;px;
     text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.normal-button {
+
+}
+
+.special-button {
+
 }
 
 #contact-button {
@@ -479,7 +499,7 @@ dev.index.html
 
 #left-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -487,7 +507,6 @@ dev.index.html
     border-radius: 100px;
     margin-left: 20%;
     margin-top: 5%;
-    order: 1;
 }
 
 /*typing cursor*/
@@ -495,7 +514,8 @@ dev.index.html
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 0;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .typing-container * {
