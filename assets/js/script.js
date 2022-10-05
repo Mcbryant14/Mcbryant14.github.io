@@ -80,7 +80,7 @@ const submitButton = document.getElementById('btn-main')
 //navbar collapse
 const navLinks = document.querySelector('.nav_links');
 const navButton = document.querySelector('.hamburger');
-const header = document.querySelector('.header');
+const header = document.querySelector('.main-navigation');
 //other
 const westchesterDiv = document.querySelector('#westchester > img');
 
@@ -125,14 +125,14 @@ const punches = [
 document.querySelector('.cta').addEventListener('click', function() {
     alert("Contact information coming soon!");
 });
-
+*/
 navButton.addEventListener('click', () => {
     header.classList.toggle('header-toggle');
     navLinks.classList.toggle('navbar-visible');
 });
 
 // Get random joke function
-
+/*
 function getRandomJoke() {
     //gets random index value
     let number = Math.floor(Math.random() * (jokes.length));

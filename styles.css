@@ -417,6 +417,14 @@ header {
     height: 50vh;
 }
 
+
+/*navigation*/
+
+.main-navigation {
+    height: 100px;
+    transition: all 1s ease;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -424,11 +432,21 @@ nav {
     align-items: center;
     height: 110px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 15px;
+}
+
+#nav-headshot {
+    border-radius: 100px;
+    width: 75px;
+    margin: 10px 0 ;
+}
+
+.fa-2x {
+    font-size: 1.75em!important;
 }
 
 #logo {
-    padding: 5px;
+    padding: 0px;
 }
 
 nav > ul {
@@ -440,14 +458,42 @@ nav > ul {
     padding-right: 25px;
 }
 
-nav > ul li {
+.hamburger {
+    margin-right: 10px;
+    color: var(--main-bg-color);
+    background-color: transparent;
+    border: none;
 }
+
+.fa-solid .fa-bars {
+    height: 50px;
+}
+
+.navbar-visible {
+    display: flex!important;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    transition: all 1s ease;
+    border: none;
+    margin-right: 18px;
+}
+
+.header-toggle {
+    height: 133px!important;
+    background-color: var(--accent-one);
+    justify-content: space-between;
+
+}
+
+/*Test*/
+
 
 .cta-buttons {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .normal-button, .special-button {
@@ -462,15 +508,7 @@ nav > ul li {
     list-style-type: none;
 }
 
-.normal-button {
-
-}
-
 .special-button {
-
-}
-
-#contact-button {
     background-color: var(--accent-one);
 }
 
@@ -486,40 +524,63 @@ footer {
 dev.index.html
 ******************/
 
+#header-main-container {
+    height: calc(50vh - 100px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 #main-home-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.home-containers {
-    width: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 #left-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 90%;
+    padding: 1rem;
+    margin: 0px 0 4rem 1rem;
+}
+
+#right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
 #headshot {
     border-radius: 100px;
-    margin-left: 20%;
-    margin-top: 5%;
+    margin: 0 3.5rem 4rem 0;
 }
 
 /*typing cursor*/
 .typing-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
+    padding: 10px;
+    padding: 10px 10px 10px 0;
 }
 
 .typing-container * {
-color: white;
+    color: white;
+}
+
+.typing-text {
+    color: var(--main-bg-color);
+    font-size: 21px;
 }
 
 .input-cursor {

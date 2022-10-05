@@ -1,6 +1,6 @@
 /*****************
     MEDIA QUERIES
-******************/
+*****************
 
 @media screen and (min-width: 300px) {
     .second-cta {display: none;}
@@ -41,4 +41,47 @@
 @media screen and (min-width: 1500px) {
     .main-content-wrapper{padding-top: 7rem;}
     .main-heading-text {font-size: 90px;}
+}*/
+
+
+@media screen and (max-width: 799px) {
+    .nav_links li {border: none; background-color: transparent;}
+}
+
+@media screen and (min-width: 200px) {
+    .nav_links {display: none;}
+    #left-container {width: 100%;}
+    #right-container {display: none;}
+    #logo {display: none;}
+    nav > ul {gap: 0; padding-right: 0;}
+}
+
+@media screen and (min-width: 420px) {
+    .typing-text {font-size: 27px;}
+}
+
+@media screen and (min-width: 600px) {
+    #right-container {display: flex;}
+    #nav-headshot {display: none;}
+    #headshot {width: 11rem;}
+    #logo {display: flex;}
+    #left-container {width: 70%; margin-left: 2rem;}
+    #right-container {width: 30%;}
+}
+
+@media screen and (min-width: 700px) {
+    #left-container, #right-container {width: 50%;}
+    #headshot {margin: 0 auto 2rem;}
+}
+
+@media screen and (min-width: 800px) {
+    .hamburger {display: none;}
+    .nav_links {display: flex; gap: 20px; margin-right: 1rem;}
+    #headshot {width: 15rem; margin: auto;}
+    header {height: 59vh;}
+    #header-main-container {height: calc(59vh - 100px);}
+}
+
+@media screen and (min-width: 1000px) {
+    .typing-text {font-size: 36px;}
 }
