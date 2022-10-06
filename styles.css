@@ -415,6 +415,7 @@ a:-webkit-any-link {
 header {
     background-color: var(--main-dark-accent);
     height: 50vh;
+    padding: 0 1rem;
 }
 
 
@@ -547,7 +548,13 @@ dev.index.html
     justify-content: space-between;
     width: 90%;
     padding: 1rem;
-    margin: 0px 0 4rem 1rem;
+    margin: 0px 0 2rem 1rem;
+}
+
+.introduction {
+    color: var(--accent-two);
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #right-container {
@@ -559,7 +566,8 @@ dev.index.html
 }
 
 #headshot {
-    border-radius: 100px;
+    padding: 5px;
+    border-radius: 100%;
     margin: 0 3.5rem 4rem 0;
 }
 
@@ -572,6 +580,7 @@ dev.index.html
     margin-bottom: .75rem;
     padding: 10px;
     padding: 10px 10px 10px 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .typing-container * {
