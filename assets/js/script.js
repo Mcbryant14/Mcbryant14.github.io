@@ -80,7 +80,8 @@ const submitButton = document.getElementById('btn-main')
 //navbar collapse
 const navLinks = document.querySelector('.nav_links');
 const navButton = document.querySelector('.hamburger');
-const header = document.querySelector('.main-navigation');
+const header = document.querySelector('.header');
+const nav = document.querySelector('.main-navigation');
 //other
 const westchesterDiv = document.querySelector('#westchester > img');
 
@@ -128,6 +129,7 @@ document.querySelector('.cta').addEventListener('click', function() {
 */
 navButton.addEventListener('click', () => {
     header.classList.toggle('header-toggle');
+    nav.classList.toggle('header-toggle');
     navLinks.classList.toggle('navbar-visible');
 });
 

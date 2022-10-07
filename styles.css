@@ -34,6 +34,8 @@ a:-webkit-any-link {
 header {
     background-color: var(--main-dark-accent);
     height: 100px;
+    transition: all 1s ease;
+
 }
 
 
