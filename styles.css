@@ -25,6 +25,14 @@ body {
     font-family: sans-serif;
 }
 
+a:not(.normal-button):not(.special-button) {
+    color: var(--accent-two);
+}
+
+a:not(.normal-button):not(.special-button):hover {
+    text-decoration: underline;
+}
+
 a:-webkit-any-link {
     color: unset;
     cursor: pointer;
@@ -159,6 +167,11 @@ FOOTER
 
 .footer-text {
     color: var(--main-bg-color);
+    padding: .2rem;
+}
+
+.footer-column {
+    padding: .5rem;
 }
 
 .name {
@@ -183,7 +196,6 @@ dev.index.html
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
     background-color: var(--main-dark-accent);
 }
 
@@ -196,19 +208,19 @@ dev.index.html
     height: 100%;
 }
 
-#left-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    width: 90%;
-    padding: 1rem;
-}
-
 .introduction {
     color: var(--accent-two);
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
+}
+
+#left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 3rem 2rem;
+    width: 90%;
+    padding: 1rem;
 }
 
 #right-container {
@@ -217,6 +229,7 @@ dev.index.html
     justify-content: center;
     align-items: center;
     width: 50%;
+    padding: 2rem;
 }
 
 #headshot {

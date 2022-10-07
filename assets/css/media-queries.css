@@ -63,11 +63,12 @@
 @media screen and (min-width: 1300px) {
     .introduction {font-size: 88px;}
     .typing-text {font-size: 47px;}
+    #left-container {margin-left: 4rem;}
 }
 
 @media screen and (min-width: 2000px) {
     #headshot {width: 500px;}
-    #header-main-container {margin: 0 2rem;}
+    #header-main-container {}
     .introduction {font-size: 100px;}
     #left-container {width: 50%;}
     #right-container {width: 50%;}
