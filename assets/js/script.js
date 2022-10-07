@@ -1,7 +1,65 @@
+/******************
+ * GLOBAL VARIABLES
+ ******************/
+
+//Generator function
+let prevNumber = 0;
+const generateJokeButton = document.getElementById('generateButton');
+const punchButton = document.getElementById('show-punch');
+const punchOutput = document.querySelector(".punchline-output");
+//Main Page Buttons
+const firstButton = document.getElementById('aboutmeDiv');
+const secondButton = document.getElementById('secondButton');
+const thirdButton = document.getElementById('thirdButton');
+const myHiddenBio = document.getElementById('hiddenDetails');
+const hiddenSubmitForm = document.getElementById('hiddenForm');
+const hiddenSubmitDetails = document.getElementById('hiddenFormResults');
+const submitButton = document.getElementById('btn-main')
+//navbar collapse
+const navLinks = document.querySelector('.nav_links');
+const navButton = document.querySelector('.hamburger');
+const header = document.querySelector('.header');
+const nav = document.querySelector('.main-navigation');
 
 /******************
- typing feature on homepage
+ * ARRAYS
  ******************/
+
+/*Joke Generator*/
+const jokes = [
+  "I'm afraid for the calendar.",
+  "My wife said I should do lunges to stay in shape.",
+  "Singing in the shower is fun until you get soap in your mouth.",
+  "I thought the dryer was shrinking my clothes.",
+  "Have you heard about the chocolate record player?",
+  "What’s brown and sticky?",
+  "Why are elevator jokes so classic and good?",
+  "What did the police officer say to his belly-button?",
+  "What do you call it when a group of apes starts a company?",
+  "What kind of drink can be bitter and sweet?",
+  "Want to know why nurses like red crayons?"
+];
+/*punchlines*/
+const punches = [
+  "Its days are numbered.",
+  "That would be a big step forward.",
+  "Then it's a soap opera.",
+  "Turns out it was the refrigerator all along.",
+  "It sounds pretty sweet.",
+  "A stick.",
+  "They work on many levels.",
+  "You’re under a vest.",
+  "Monkey business.",
+  "Reali-tea.",
+  "Sometimes they have to draw blood."
+];
+
+
+/******************
+ * FUNCTIONS
+ ******************/
+
+/*typing feature on homepage*/
  
  var TxtRotate = function(el, toRotate, period) {
    this.toRotate = toRotate;
@@ -60,81 +118,18 @@
    document.body.appendChild(css);
  };
 
-/******************
- * GLOBAL VARIABLES
- ******************/
+/* NAV BUTTON EVENT*/
 
-//Generator function
-let prevNumber = 0;
-const generateJokeButton = document.getElementById('generateButton');
-const punchButton = document.getElementById('show-punch');
-const punchOutput = document.querySelector(".punchline-output");
-//Main Page Buttons
-const firstButton = document.getElementById('aboutmeDiv');
-const secondButton = document.getElementById('secondButton');
-const thirdButton = document.getElementById('thirdButton');
-const myHiddenBio = document.getElementById('hiddenDetails');
-const hiddenSubmitForm = document.getElementById('hiddenForm');
-const hiddenSubmitDetails = document.getElementById('hiddenFormResults');
-const submitButton = document.getElementById('btn-main')
-//navbar collapse
-const navLinks = document.querySelector('.nav_links');
-const navButton = document.querySelector('.hamburger');
-const header = document.querySelector('.header');
-const nav = document.querySelector('.main-navigation');
-//other
-const westchesterDiv = document.querySelector('#westchester > img');
-
-/******************
- * ARRAYS
- ******************/
-
-/*Joke Generator*/
-const jokes = [
-    "I'm afraid for the calendar.",
-    "My wife said I should do lunges to stay in shape.",
-    "Singing in the shower is fun until you get soap in your mouth.",
-    "I thought the dryer was shrinking my clothes.",
-    "Have you heard about the chocolate record player?",
-    "What’s brown and sticky?",
-    "Why are elevator jokes so classic and good?",
-    "What did the police officer say to his belly-button?",
-    "What do you call it when a group of apes starts a company?",
-    "What kind of drink can be bitter and sweet?",
-    "Want to know why nurses like red crayons?"
-];
-/*punchlines*/
-const punches = [
-    "Its days are numbered.",
-    "That would be a big step forward.",
-    "Then it's a soap opera.",
-    "Turns out it was the refrigerator all along.",
-    "It sounds pretty sweet.",
-    "A stick.",
-    "They work on many levels.",
-    "You’re under a vest.",
-    "Monkey business.",
-    "Reali-tea.",
-    "Sometimes they have to draw blood."
-];
-
-/******************
- * FUNCTIONS
- ******************/
-
-/*Alert for contact information
-document.querySelector('.cta').addEventListener('click', function() {
-    alert("Contact information coming soon!");
-});
-*/
 navButton.addEventListener('click', () => {
     header.classList.toggle('header-toggle');
     nav.classList.toggle('header-toggle');
     navLinks.classList.toggle('navbar-visible');
 });
 
+/*JOKE GENERATOR
+
 // Get random joke function
-/*
+
 function getRandomJoke() {
     //gets random index value
     let number = Math.floor(Math.random() * (jokes.length));
@@ -169,25 +164,7 @@ punchButton.addEventListener('click', () => {
         punchOutput.innerHTML = punches[prevNumber];
 });
 
-//First Button Events
-
-firstButton.addEventListener('click', () => {
-
-    if (myHiddenBio.style.display == 'none') {
-        myHiddenBio.style.display = 'block';
-    } else {
-        myHiddenBio.style.display = 'none';
-    }
-
-    if (hiddenSubmitForm.style.display == 'block') {
-        hiddenSubmitForm.style.display = 'none';
-    }
-});
-
 
 /******************
  *    jquery
  ******************/
-
-
-

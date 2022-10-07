@@ -15,6 +15,7 @@
     nav > ul {gap: 0; padding-right: 0;}
     .introduction {font-size: 34px;}
     .typing-text {font-size: 20px;}
+    #main-home-body {flex-direction: column;  align-items: center;}
 }
 
 @media screen and (min-width: 420px) {
@@ -30,6 +31,7 @@
     #left-container {width: 70%;}
     #right-container {width: 30%;}
     .typing-text {font-size: 24px;}
+    #main-home-body {flex-direction: row;}
 }
 
 @media screen and (max-height: 550px) and (orientation: landscape) {
