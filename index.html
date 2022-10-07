@@ -16,7 +16,7 @@
     <header class="header">
         <nav class="main-navigation">
             <a href="#" id="logo"><img src="./assets/images/mylogo.png" alt="logo"></a>
-            <img id="nav-headshot" src="./assets/images/myheadshot-300X200.jpg" alt="headshot image of Matthew Bryant">
+            <img id="nav-headshot" src="./assets/images/headshots/myheadshot-300X200.jpg" alt="headshot image of Matthew Bryant">
             <ul class="nav_links">
                 <a href="#"><li class="normal-button">Home</li></a>
                 <a href="#"><li class="normal-button">My Work</li></a>
@@ -28,8 +28,10 @@
                 </div>
              </button>
          </nav>
+    </header>
 
          <section id="header-main-container">
+
             <div id="left-container" class="home-containers">
                 <h2 class="introduction">Matthew Bryant</h2>
                 <div class="typing-container">
@@ -47,14 +49,23 @@
                     </ul>
                 </div>
             </div>
+            
             <div id="right-container" class="home-containers">
-                <img id="headshot" src="./assets/images/myheadshot-300X200.jpg" alt="headshot image of Matthew Bryant">
+                <img
+                id="headshot"
+                alt="headshot image of Matthew Bryant"
+                src="./assets/images/headshots/myheadshot-300X200.jpg"
+
+                srcset="./assets/images/headshots/myheadshot2000.jpg 2000w,
+                        ./assets/images/headshots/myheadshot1500.jpg 1500w,
+                        ./assets/images/headshots/myheadshot1000.jpg 1000w,
+                        ./assets/images/headshots/myheadshot800.jpg 800w,
+                        ./assets/images/headshots/myheadshot500.jpg 500w,
+                        ./assets/images/headshots/myheadshot-300X200.jpg 300w,"
+                sizes="">
             </div>
+
          </section>
-
-    </header>
-
-    </section>
 
     <!--SCRIPTS-->
     <link rel="stylesheet" href="./assets/css/media-queries.css">

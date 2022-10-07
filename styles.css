@@ -1,386 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 /*****************
-    WHOLE SITE
-*****************
-
-.all-wrapper {
-    margin: auto;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../Images/patrick-hendryNEW-37ZuGYD3JOk-unsplash.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-html {
-    font-size: 16px;
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    height: 100%;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 45px;
-}
-
-button {
-    padding: 9px 25px;
-    border: none;
-    border-radius: 50px;
-    cursor:
-    transition: all 0.3s ease 0s;
-    background-color: #00AAA9;
-    color: #28161C;
-}
-
-button:hover {
-    background-color: rgba(0,136,169,0.8);
-    cursor: pointer;
-}
-
-button:active {
-    background-color: #00AAA9;
-}
-
-
-/*****************
-    NAVIGATION
-*****************
-
-li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: black;
-    height: 83px;
-    transition: all 1s ease;
-}
-
-.header-toggle {
-    height: 150px!important;
-}
-
-.logo {
-    cursor: pointer;
-    max-width: 60px;
-}
-
-.nav_links {
-    list-style: none;
-    display: none;
-    transition: all 1s ease;
-}
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-    color: #B9B9B9;
-}
-
-.nav_links li a:hover {
-    color: #00AAA9;
-}
-
-.main-navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    transition: all 1s ease;
-}
-
-.contact-button {
-    display: none;
-}
-
-.nav_links > li {
-    margin: .5em auto;
-}
-
-.navbar-visible {
-    display: flex !important;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    transition: all 1s ease;}
-
-
-/*****************
-    FOOTER
-*****************
-
-footer {
-   display: none;
-}
-
-/*****************
-    FRONT PAGE
-*****************
-
-body {
-    background-image: url("Images/patrick-hendry-37ZuGYD3JOk-unsplash.jpg");
-    height: 100%;
-    width: 100%;
-}
-
-.hero {
-    background-image: url("https://www.canva.com/design/DAFBn_3itBw/ZtNEy85H-oBCCmagbfjBxQ/watch?utm_content=DAFBn_3itBw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel");
-}
-
-body > main > div {
-    background-size: cover;
-}
-
-.top-container {
-    height: 100vh;
-}
-
-.main-content-wrapper{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: relative;
-    width: 95%;
-    margin: auto;
-}
-
-.main-heading {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.main-heading-text {
-    margin-top: 2rem;
-    margin-left: 0.5rem;
-    margin-bottom: 25px;
-}
-
-/* FRONT PAGE BUTTONS */
-
-/* primary buttons 
-
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-/*.button-container a {
-    width: 100%;
-}
-
-.heading-cta {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-
-.heading-cta button {
-    width: 90%;
-    min-width: 100px;
-}
-
-#secondButton {
-    display: none;
-}
-
-/* hidden 
-#hiddenDetails {
-    max-width: 100%;
-    margin-top: 2em;
-    background-image: linear-gradient(45deg, gray, black);
-    border-radius: 15px;
-    display: none;
-}
-
-.hiddenBorder {
-    padding: 1rem;
-    border: 5px solid #00AAA9;
-    border-radius: 15px;
-}
-
-#hiddenDetails > p {
-    color: white;
-}
-
-#hiddenForm {
-    margin: 1.5em;
-    display: none;
-}
-
-#hiddenFormResults {
-    display: none;
-}
-
-/* Right section of homepage (joke generator) 
-
-.joke-container {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.joke-generator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 500px;
-    margin: 2rem auto 3rem;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
-    height: 300px;
-    background-color: rgba(189, 195, 199, 1);
-}
-
-.joke-heading {
-    text-align: center;
-}
-
-.joke-heading h2 {
-    font-size: 27px;
-}
-
-.joke-button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 5px;
-}
-
-.joke-button {
-    text-align: center;
-}
-
-.joke-button button {
-    font-size: 14px;
-}
-
-.joke-output {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 25px;
-}
-
-.output {
-    font-size: 25px;
-    max-width: 500px;
-}
-.output-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.punchline-output {
-    display: none;
-}
-
-/*****************
-   PORTFOLIO PAGE
-*****************
-
-.portfolio-image-main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 345px));
-    grid-template-rows: 300px 300px;
-    justify-content: center;
-    gap: 10px;
-    grid-auto-columns: 1fr;
-    padding: 1rem;
-    background-color: #B9B9B9;
-}
-
-.portfolio-image-cont img {
-    transition: all .4s ease;
-}
-
-.portfolio-image-cont img:hover {
-    transform: scale(1.04);
-}
-
-.portfolio-image-main-container > div {
-    width: 100%;
-}
-
-.portfolio-image {
-    border-radius: 15px;
-}
-
-.portfolio-image-cont {
-    height: 300px;
-    width: 275px;
-    position: relative;
-    display: flex;
-}
-
-.portfolio-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.portfolio-image img {
-    width: 300px;
-}
-
-.formStyles {
-    justify-content: center;
-    margin: 2em auto;
-}
-
-
-.footer {
-    text-align: center;
-    position: sticky;
-    bottom: 0;
-    height: 50px;
-    background-color: black;
-    color: white;
-    width: 100%;
-}
-
-.fa-solid .fa-bars {
-    color: white;
-    height: 50px;
-}
-
-/*****************
 Variables
 *****************/
 
@@ -390,7 +10,6 @@ Variables
     --accent-one: #8685EF;
     --accent-two: #D3FBD8;
 }
-
 
 /*****************
 Global Styles
@@ -414,8 +33,7 @@ a:-webkit-any-link {
 
 header {
     background-color: var(--main-dark-accent);
-    height: 50vh;
-    padding: 0 1rem;
+    height: 100px;
 }
 
 
@@ -526,11 +144,13 @@ dev.index.html
 ******************/
 
 #header-main-container {
-    height: calc(50vh - 100px);
+    height: 54vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 0 1rem;
+    background-color: var(--main-dark-accent);
 }
 
 #main-home-container {
@@ -546,9 +166,9 @@ dev.index.html
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 3rem;
     width: 90%;
     padding: 1rem;
-    margin: 0px 0 2rem 1rem;
 }
 
 .introduction {
@@ -568,7 +188,6 @@ dev.index.html
 #headshot {
     padding: 5px;
     border-radius: 100%;
-    margin: 0 3.5rem 4rem 0;
 }
 
 /*typing cursor*/
