@@ -39,7 +39,9 @@ header {
 }
 
 
-/*navigation*/
+/**************
+HEADER
+***************/
 
 .main-navigation {
     height: 100px;
@@ -107,9 +109,6 @@ nav > ul {
 
 }
 
-/*Test*/
-
-
 .cta-buttons {
     display: flex;
     flex-direction: row;
@@ -138,7 +137,40 @@ nav > ul {
 }
 
 footer {
-    display: none;
+    background-color: var(--main-dark-accent);
+    height: 100px;
+}
+
+footer * {
+    
+}
+
+/****************
+FOOTER
+****************/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.footer-text {
+    color: var(--main-bg-color);
+}
+
+.name {
+
+}
+
+.contact {
+
+}
+
+.links {
+
 }
 
 /*****************
@@ -228,6 +260,29 @@ dev.index.html
     60% {opacity: 0;}
     100% {opacity: 0;}
   }
+
+/*home body*/
+
+#main-home-body {
+    height: 50vh;
+    padding: 2rem;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#main-body-left-container {
+    background-color: blue;
+    height: 100%;
+    width: 50%;
+}
+
+#main-body-right-container {
+    background-color: red;
+    height: 100%;
+    width: 50%;
+}
 
 
 
