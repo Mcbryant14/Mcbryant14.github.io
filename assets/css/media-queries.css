@@ -15,7 +15,9 @@
     nav > ul {gap: 0; padding-right: 0;}
     .introduction {font-size: 34px;}
     .typing-text {font-size: 20px;}
-    #main-home-body {flex-direction: column;  align-items: center;}
+    #main-home-body {flex-direction: column;  align-items: center; height: auto;}
+    .footer {padding: 0 1rem; font-size: 14px;}
+    #column1 {display: none;}
 }
 
 @media screen and (min-width: 420px) {
@@ -31,12 +33,17 @@
     #left-container {width: 70%;}
     #right-container {width: 30%;}
     .typing-text {font-size: 24px;}
-    #main-home-body {flex-direction: row;}
+    #main-home-body {flex-direction: row; height: 50vh;}
+    #column1 {display: initial;}
 }
 
 @media screen and (max-height: 550px) and (orientation: landscape) {
     #left-container, #right-container {height: 100%;}
     #header-main-container {margin: 0 1rem;}
+}
+
+@media screen and (min-width: 550px) {
+
 }
 
 @media screen and (min-width: 700px) {

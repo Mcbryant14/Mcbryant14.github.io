@@ -282,6 +282,7 @@ dev.index.html
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 3rem;
 }
 
 #main-body-left-container {
@@ -295,13 +296,12 @@ dev.index.html
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
-/* right container */
-
-.skills-container {
-    width: 70%;
-    height: 70%;
+.joke-container {
+    width: 50%;
+    height: 50%;
     min-width: 300px;
     min-height: 300px;
     padding: rem;
@@ -310,6 +310,20 @@ dev.index.html
     background-color: var(--accent-two);
     border-radius: 7px;
 }
+
+.skills-container {
+    width: 50%;
+    height: 50%;
+    min-width: 300px;
+    min-height: 300px;
+    padding: rem;
+    position: relative;
+    max-width: 500px;
+    background-color: var(--accent-two);
+    border-radius: 7px;
+}
+
+/* right container */
 
 .skill {
     padding: 1rem;
@@ -402,18 +416,6 @@ dev.index.html
 }
 
 /* left container */
-
-.joke-container {
-    width: 70%;
-    height: 70%;
-    min-width: 300px;
-    min-height: 300px;
-    padding: rem;
-    position: relative;
-    max-width: 500px;
-    background-color: var(--accent-two);
-    border-radius: 7px;
-}
 
 .joke-heading {
     font-size: 20px;
