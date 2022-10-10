@@ -4,9 +4,11 @@
 
 //Generator function
 let prevNumber = 0;
-const generateJokeButton = document.getElementById('generateButton');
-const punchButton = document.getElementById('show-punch');
-const punchOutput = document.querySelector(".punchline-output");
+const makeMeLaughButton = document.getElementById('make-me-laugh');
+const jokeButton = document.getElementById('generate-joke');
+const punchButton = document.getElementById('punchline');
+const jokeOutput = document.querySelector('.joke-output');
+const punchlineOutput = document.querySelector('.punchline-output');
 //Main Page Buttons
 const firstButton = document.getElementById('aboutmeDiv');
 const secondButton = document.getElementById('secondButton');
@@ -37,7 +39,12 @@ const jokes = [
   "What did the police officer say to his belly-button?",
   "What do you call it when a group of apes starts a company?",
   "What kind of drink can be bitter and sweet?",
-  "Want to know why nurses like red crayons?"
+  "Want to know why nurses like red crayons?",
+  "What do you call a factory that makes okay products?",
+  "What did the janitor say when he jumped out of the closet?",
+  "Have you heard about the chocolate record player?",
+  "What did the ocean say to the beach?",
+  "I asked my dog what's two minus two."
 ];
 /*punchlines*/
 const punches = [
@@ -51,7 +58,12 @@ const punches = [
   "You’re under a vest.",
   "Monkey business.",
   "Reali-tea.",
-  "Sometimes they have to draw blood."
+  "Sometimes they have to draw blood.",
+  "A satisfactory.",
+  "Supplies!",
+  "It sounds pretty sweet.",
+  "Nothing, it just waved.",
+  "He said nothing."
 ];
 
 
@@ -126,7 +138,7 @@ navButton.addEventListener('click', () => {
     navLinks.classList.toggle('navbar-visible');
 });
 
-/*JOKE GENERATOR
+/*JOKE GENERATOR*/
 
 // Get random joke function
 
@@ -144,27 +156,76 @@ function getRandomJoke() {
     prevNumber = number;
 }
 
-// Show/hide punchline function
-
 function hidePunchline() {
-    if (punchOutput.style.display == 'flex') {
-        punchOutput.style.display = 'none';
-    }
+  if (punchlineOutput.style.display == 'flex') {
+      punchlineOutput.style.display = 'none';
+  }
 }
 
-generateJokeButton.addEventListener('click', () => {
-    getRandomJoke();
+function showPunchline() {
+  if (punchlineOutput.style.display == 'none') {
+    punchlineOutput.style.display = 'flex';
+  }
+}
+
+function hidePunchlineButton() {
+  if (punchButton.style.display == 'flex') {
+    punchButton.style.display = 'none';
+  }
+}
+
+function showPunchlineButton() {
+  if (punchButton.style.display == 'none') {
+    punchButton.style.display = 'flex';
+  }
+}
+
+function hideJokeButton() {
+  if (jokeButton.style.display == 'flex') {
+    jokeButton.style.display = 'none';
+  }
+}
+
+function showJokeButton() {
+  if (jokeButton.style.display == 'none') {
+    jokeButton.style.display = 'flex';
+  }
+}
+
+/*EVENT LISTENERS*/
+
+makeMeLaughButton.addEventListener('click', () => {
+  makeMeLaughButton.style.display = 'none';
+  $('.joke-generator').css("justify-content", "space-between");
+  $('.joke-output').show();
+  showJokeButton();
+});
+
+/*click joke button*/
+jokeButton.addEventListener('click', () => {
+
+  getRandomJoke();
+  hideJokeButton();
+  showPunchlineButton();
+
+  if (punchlineOutput.style.display == 'flex') {
     hidePunchline();
+  }
+
 });
 
-// Function on click show punchline update punchline output to new punchline
-
+/*click punchline button*/
 punchButton.addEventListener('click', () => {
-        punchOutput.style.display = 'flex';
-        punchOutput.innerHTML = punches[prevNumber];
+
+  punchlineOutput.innerHTML = punches[prevNumber];
+
+  hidePunchlineButton();
+  showJokeButton();
+  showPunchline();
+
 });
 
 
-/******************
- *    jquery
- ******************/
+//when click punchline button, show punchline/hide punchline button/show joke button
+
+//when I click joke, if punchline is visible, make it disappear

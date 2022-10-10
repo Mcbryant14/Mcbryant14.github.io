@@ -39,6 +39,10 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 header {
     background-color: var(--main-dark-accent);
     height: 100px;
@@ -415,23 +419,56 @@ dev.index.html
     transform: translateX(-50%) rotate(45deg);
 }
 
+/*JOKE GENERATOR*/
 /* left container */
-
-.joke-heading {
-    font-size: 20px;
-}
 
 .joke-generator {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;;
     align-items: center;
+    transition: 1s all ease;
+    padding: 2rem 0;
 }
 
 .joke-generator > * {
+    padding: 1rem;
+}
+
+.joke-heading {
+    font-size: 26px;
+    color: var(--main-dark-accent);
+}
+
+.joke-output {
+    text-align: center;
+    font-weight: 600;
+    padding: 0 .5rem;
+}
+
+.punchline-output {
+    color: var(--accent-one);
+}
+
+.joke-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.generator-button {
+    max-width: 200px;
+    color: var(--main-dark-accent);
+    background-color: transparent;
+    border: 1px solid var(--main-dark-accent);
     padding: .5rem;
 }
+
+
 
 
 
