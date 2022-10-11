@@ -196,9 +196,10 @@ function showJokeButton() {
 
 makeMeLaughButton.addEventListener('click', () => {
   makeMeLaughButton.style.display = 'none';
-  $('.joke-generator').css("justify-content", "space-between");
+  $('.joke-generator').css("gap", "1.5rem");
   $('.joke-output').show();
   showJokeButton();
+  /*$('.joke-heading').addClass('top-position');*/
 });
 
 /*click joke button*/

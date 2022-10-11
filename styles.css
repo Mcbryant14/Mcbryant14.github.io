@@ -287,17 +287,22 @@ dev.index.html
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 #main-body-left-container {
     height: 100%;
     width: 50%;
+    order: 1;
+}
+
+#main-body-right-container {
+    order: 0;
 }
 
 #main-body-right-container, #main-body-left-container {
     height: 100%;
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,14 +311,19 @@ dev.index.html
 
 .joke-container {
     width: 50%;
-    height: 50%;
+    height: 300px;
     min-width: 300px;
     min-height: 300px;
-    padding: rem;
+    padding: .45rem;
     position: relative;
     max-width: 500px;
     background-color: var(--accent-two);
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--accent-one);
 }
 
 .skills-container {
@@ -424,22 +434,28 @@ dev.index.html
 /* left container */
 
 .joke-generator {
-    height: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;;
     align-items: center;
-    transition: 1s all ease;
-    padding: 2rem 0;
+    gap: 1rem;
+    transition: .5s all ease;
+    padding: 0;
 }
 
 .joke-generator > * {
-    padding: 1rem;
+    padding: 0rem;
 }
 
 .joke-heading {
     font-size: 26px;
     color: var(--main-dark-accent);
+}
+
+.top-position {
+    position: absolute;
+    top: .75rem;
 }
 
 .joke-output {
