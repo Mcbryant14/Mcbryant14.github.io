@@ -327,12 +327,13 @@ dev.index.html
 
 .joke-container, .skills-container {
     height: 95%;
+    max-height: 25rem;
     width: 100%;
     min-width: 15.625rem;
     max-width: 28.125rem;
     border-radius: 7px;
     border: 1px solid var(--accent-one);
-    background-color: var(--accent-two);
+    /*background-color: var(--accent-two);*/
     position: relative;
     padding: .45rem;
 }
@@ -356,9 +357,9 @@ dev.index.html
 }
 
 .skill .skill-bar {
-    height: 8px;
+    height: 10px;
     width: 100%;
-    border-radius: 6px;
+    border-radius: 8px;
     margin-top: 6px;
     background: var(--main-bg-color);
 }
@@ -489,6 +490,15 @@ dev.index.html
     padding: .5rem;
 }
 
+#make-me-laugh, #punchline {
+    background-color: var(--accent-one);
+    color: var(--main-bg-color);
+}
+
+#generate-joke {
+    color: var(--accent-two);
+    background-color: var(--main-dark-accent);
+}
 
 
 

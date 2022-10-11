@@ -75,10 +75,20 @@
     #left-container {margin-left: 4rem;}
 }
 
+@media screen and (min-width: 1500px) {
+    /*.skills-container {background-color: transparent; border: 0px;}*/
+    .skill .title {font-size: 21px;}
+    .skill-per .tooltip {font-size: 14px;}
+    .joke-heading {font-size: 27px;}
+    .joke-output, .punchline-output {font-size: 20px;}
+    .generator-button {font-size: 17px;}
+}
 @media screen and (min-width: 2000px) {
     #headshot {width: 500px;}
     #header-main-container {}
     .introduction {font-size: 100px;}
     #left-container {width: 50%;}
     #right-container {width: 50%;}
+    .joke-container, .skills-container, {max-width: 48rem;}
+
 }
