@@ -18,7 +18,7 @@ const hiddenSubmitForm = document.getElementById('hiddenForm');
 const hiddenSubmitDetails = document.getElementById('hiddenFormResults');
 const submitButton = document.getElementById('btn-main')
 //navbar collapse
-const navLinks = document.querySelector('.nav_links');
+const navLinks = document.querySelector('.nav-links');
 const navButton = document.querySelector('.hamburger');
 const header = document.querySelector('.header');
 const nav = document.querySelector('.main-navigation');
@@ -71,7 +71,7 @@ const punches = [
  * FUNCTIONS
  ******************/
 
-/*typing feature on homepage*/
+/*typing feature on homepage
  
  var TxtRotate = function(el, toRotate, period) {
    this.toRotate = toRotate;
@@ -129,7 +129,7 @@ const punches = [
    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
    document.body.appendChild(css);
  };
-
+*/
 /* NAV BUTTON EVENT*/
 
 navButton.addEventListener('click', () => {

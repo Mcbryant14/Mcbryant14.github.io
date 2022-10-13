@@ -7,8 +7,10 @@
 }
 
 @media screen and (min-width: 0px) {
-    #header-main-container {height: 100vh;}
-    .nav_links {display: none;}
+    .nav-links {display: none;}
+    .nav-links span {display: none;}
+    .resume-link {border: 0; padding: 0; background-color: transparent;}
+    #inner-containers-one {flex-direction: column;}
     #left-container {width: 100%;}
     #right-container {display: none;}
     #logo {display: none;}
@@ -50,14 +52,25 @@
     .introduction {font-size: 42px;}
     .typing-text {font-size: 26px;}
     #headshot {width: 218px; border: 2px dotted var(--accent-two);}
+    #intro-container {margin-top: 9rem;}
+    .intro-line-two {font-size: 50px;}
+    .intro-line-three {font-size: 40px;}
 }
 
 @media screen and (min-width: 800px) {
     .hamburger {display: none;}
     .nav-links {display: flex; align-items: center; gap: 1.5rem; margin-right: 2rem;}
+    .nav-links span {display: initial;}
+    .resume-link {border: 1px solid var(--main-bg-color); padding: 10px; background-color: var(--accent-one);}
     #headshot {width: 15rem; width: 275px}
     .introduction {font-size: 50px;}
     .typing-text {font-size: 29px;}
+}
+
+@media screen and (min-width: 900px) {
+    #intro-container {margin-top: 11rem;}
+    .intro-line-two {font-size: 60px;}
+    .intro-line-three {font-size: 50px;}
 }
 
 @media screen and (min-width: 1000px) {
@@ -80,7 +93,11 @@
     .joke-heading {font-size: 27px;}
     .joke-output, .punchline-output {font-size: 20px;}
     .generator-button {font-size: 17px;}
+    #intro-container {margin-top: 13rem;}
+    .intro-line-two {font-size: 70px;}
+    .intro-line-three {font-size: 60px;}
 }
+
 @media screen and (min-width: 2000px) {
     #headshot {width: 500px;}
     #header-main-container {}
@@ -88,5 +105,9 @@
     #left-container {width: 50%;}
     #right-container {width: 50%;}
     .joke-container, .skills-container, {max-width: 48rem;}
-
+    #intro-container {margin-top: 13rem;}
+    .intro-line-one {font-size: 21px;}
+    .intro-line-two {font-size: 80px;}
+    .intro-line-three {font-size: 70px;}
+    .intro-par {font-size: 23px;}
 }
