@@ -300,8 +300,13 @@ dev.index.html
     margin: 0 2rem;
 }
 
+#main-body-right-container {
+    text-align: center;
+}
+
 .headshot-image {
     max-width: 20rem;
+    width: 90%;
 }
 
 /*My Work*/

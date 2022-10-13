@@ -65,6 +65,7 @@
     #headshot {width: 15rem; width: 275px}
     .introduction {font-size: 50px;}
     .typing-text {font-size: 29px;}
+    #inner-containers-one {flex-direction: row; flex-wrap: wrap;}
 }
 
 @media screen and (min-width: 900px) {
