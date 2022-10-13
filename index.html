@@ -7,9 +7,10 @@
         <title>Matthew Bryant</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     </head>
 <body>
 
@@ -17,10 +18,13 @@
         <nav class="main-navigation">
             <a href="#" id="logo"><img src="./assets/images/mylogo.png" alt="logo"></a>
             <img id="nav-headshot" src="./assets/images/headshots/myheadshot-300X200.jpg" alt="headshot image of Matthew Bryant">
-            <ul class="nav_links">
-                <a href="#"><li class="normal-button">Home</li></a>
-                <a href="#"><li class="normal-button">My Work</li></a>
-                <a href="#"><li class="special-button" id="contact-button">Contact Me</li></a>
+            <ul class="nav-links">
+                <a href="#"><li class="nav-link"><span>#</span>About</li></a>
+                <a href="#"><li class="nav-link"><span>#</span>Experience</li></a>
+                <a href="mywork.html"><li class="nav-link"><span>#</span>Work</li></a>
+                <a href="#"><li class="nav-link"><span>#</span>Contact</li></a>
+                <a href="#"><li class="nav-link resume-link">Resume</li></a>
+
             </ul>
             <button class="hamburger">
                 <div class="bar">
@@ -32,100 +36,78 @@
 
          <section id="header-main-container">
 
-            <div id="left-container" class="home-containers">
-                <h2 class="introduction">Matthew Bryant</h2>
-                <div class="typing-container">
-                    <h2 class="typing-text">I am a 
-                        <span
-                        class="txt-rotate typing-text"
-                        data-period="2000"
-                        data-rotate='[ "Web Developer.", "father/husband.", "yard work enthusiast." ]'></span>
-                    </h2>
-                </div>
+            <div id="intro-container" class="home-containers">
+                <h2 class="intro-line-one">Hi, my name is</h2>
+                <h2 class="intro-line-two">Matthew Bryant.</h2>
+                <h2 class="intro-line-three">I design and develop websites.</h2>
+                <p class="intro-par">I am a self-taught designer and frontend web developer with a passion for learning and creating responsive/engaging websites for my clients. I am currently open to new opportunities and would love to hear from you!</p>
+            
                 <div id="cta-buttons-container">
                     <ul class="cta-buttons">
-                        <a href="#"><li class="special-button">See my work</li></a>
+                        <a href="mywork.html"><li class="special-button">See my work</li></a>
                         <a href="#"><li class="normal-button">Change theme</li></a>
                     </ul>
                 </div>
             </div>
 
-            <div id="right-container" class="home-containers">
-                <img
-                id="headshot"
-                alt="headshot image of Matthew Bryant"
-                src="./assets/images/headshots/myheadshot-300X200.jpg"
+         </section>
 
-                srcset="./assets/images/headshots/myheadshot2000.jpg 2000w,
-                        ./assets/images/headshots/myheadshot1500.jpg 1500w,
-                        ./assets/images/headshots/myheadshot1000.jpg 1000w,
-                        ./assets/images/headshots/myheadshot800.jpg 800w,
-                        ./assets/images/headshots/myheadshot500.jpg 500w,
-                        ./assets/images/headshots/myheadshot-300X200.jpg 300w,"
-                sizes="">
+         <section id="experience">
+
+            <h2>My Experience</h2>
+
+            <div id="inner-containers-one">
+
+                <div id="main-body-left-container">
+
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>WordPress</li>
+                        <li>Git / Github</li>
+                        <li>SEO</li>
+                        <li>UI / UX</li>
+                        <li>Responsive Design</li>
+                    </ul>
+
+                </div>
+
+                <div id="main-body-center-container">
+                    <h3>1 year of experience as a freelancer</h3>
+                    <ul>
+                        <li>Develop and maintain code for client websites primarily using HTML, CSS, and JavaScript.</li>
+                        <li>Manually test sites in various browsers & mobile devices to ensure cross-browser compatibility and responsiveness.</li>
+                        <li>Design websites from scratch utilizing UI and UX principles.</li>
+                        <li>Create wireframe designs based on client requests.</li>
+                        <li>Maintain and update websites regularly for clients based on changing client needs.</li>
+                    </ul>
+                </div>
+
+                <div id="main-body-right-container">
+                    <img class="headshot-image" alt="Headshot of Matthew Bryant" src="assets/images/headshots/myheadshot800.jpg">
+                <!--main body right container-->
+                </div>
+
             </div>
 
          </section>
 
-         <section id="main-home-body">
+         <section id="work">
 
-            <div id="main-body-left-container">
+            <h2>My Work</h2>
 
-                <div class="joke-container">
-                    <div class="joke-generator">
-                        <h2 class="joke-heading">Dad Joke Generator</h2>
-                        <p class="joke-output" style="display: none;">Let's hear a joke...</p>
-                        <p class="punchline-output" style="display: none;"></p>
-                        <div class="joke-buttons">
-                            <button class="generator-button" id="make-me-laugh">Make me laugh</button>
-                            <button class="generator-button" id="generate-joke" style="display: none;">Joke</button>
-                            <button class="generator-button" id="punchline" style="display: none;">Punchline</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="inner-containers-two">
 
-            <div id="main-body-right-container">
+               <div class="work-card"></div>
+               <div class="work-card"></div>
+               <div class="work-card"></div>
+               <div class="work-card"></div>
+               <div class="work-card"></div>
+               <div class="work-card"></div>
 
-                <div class="skills-container">
-                    <div class="skill">
-                        <span class="title">HTML</span>
-                        <div class="skill-bar">
-                            <span class="skill-per" id="html">
-                                <span class="tooltip">90%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <span class="title">CSS</span>
-                        <div class="skill-bar">
-                            <span class="skill-per" id="css">
-                                <span class="tooltip">70%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <span class="title">JavaScript</span>
-                        <div class="skill-bar">
-                            <span class="skill-per" id="javascript">
-                                <span class="tooltip">50%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <span class="title">WordPress</span>
-                        <div class="skill-bar">
-                            <span class="skill-per" id="wordpress">
-                                <span class="tooltip">60%</span>
-                            </span>
-                        </div>
-                    </div>
-                <!--skills container-->
-                </div>
-            <!--main body right container-->
             </div>
 
          </section>
