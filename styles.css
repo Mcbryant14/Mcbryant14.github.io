@@ -96,9 +96,21 @@ nav > ul {
     padding-right: 25px;
 }
 
+.nav-links li {
+    color: var(--main-bg-color);
+}
+
+.nav-links span {
+    color: var(--accent-two);
+}
+
 .nav-links li span {
     font-size: 20px;
-    margin-right: .2rem;
+    margin-right: .20rem;
+}
+
+.nav-links li:hover {
+    color: var(--accent-two);
 }
 
 .resume-link {
@@ -262,7 +274,7 @@ dev.index.html
 
 #experience, #work {
     width: 100%;
-    background-color: var(--main-bg-color);
+    background-color: var(--accent-two);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -286,13 +298,84 @@ dev.index.html
     margin: 0 2rem;
 }
 
-#inner-containers-two {
-
-}
-
 .headshot-image {
     max-width: 20rem;
 }
+
+/*My Work*/
+
+#work h2 {
+
+}
+
+#work h3 {
+    margin: auto;
+    font-size: 25px;
+}
+
+#inner-containers-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 95%;
+}
+
+.work-card {
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.work-thumb {
+    transform: scale(1);
+    transition: .25s ease-in-out;
+    object-fit: cover;
+    width: fit-content;
+    height: 14rem;
+    border-radius: 12px;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    height: max-content;
+}
+
+figure:hover {
+
+}
+
+.thumb-button {
+    
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 3rem;
+    color: #ffffff;
+    z-index: 1;
+    position: absolute;
+    top: -1rem;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay {
+    background-color: var(--main-dark-accent);
+}
+
+
+
+
+
+.email-me {
+    color: var(--accent-one);
+}
+
 
 /*
 .joke-container {
