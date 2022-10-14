@@ -27,7 +27,7 @@ body {
     font-family: var(--font-sans);
 }
 
-a:not(.normal-button):not(.special-button) {
+a:not(.normal-button):not(.special-button):not(.thumb-button) {
     color: var(--accent-two);
 }
 
@@ -276,7 +276,7 @@ dev.index.html
 
 #experience, #work {
     width: 100%;
-    background-color: var(--accent-two);
+    background-color: var(--main-bg-color);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -318,6 +318,78 @@ dev.index.html
 
 #inner-containers-two {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 90rem;
+    margin: 1rem auto;
+    gap: 1.75rem;
+}
+
+.work-card figure {
+    position: relative;
+    transition: .5s all ease;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: .5s all ease;
+    border-radius: 15px;
+}
+
+figcaption:hover {
+    opacity: 1;
+    background-color: var(--main-dark-accent);
+}
+
+.caption-heading {
+    color: var(--main-bg-color);
+    padding: .5rem;
+}
+
+.work-card {
+    width: 26rem;
+}
+
+.work-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    filter: brightness(.98);
+}
+
+.work-card figure:hover {
+    transform: scale(1.05);
+}
+
+.thumb-button {
+    color: var(--main-bg-color)!important;
+    margin: 0 auto 1rem;
+    border: 1px solid var(--accent-two);
+    border-radius: 50px;
+    padding: .75rem;
+}
+
+.thumb-button:hover {
+    cursor: pointer;
+    color: var(--main-dark-accent)!important;
+    background-color: var(--accent-two);
+    text-decoration: none!important;
+}
+
+
+/*#inner-containers-two {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -337,7 +409,6 @@ dev.index.html
     width: fit-content;
     height: 14rem;
     border-radius: 12px;
-    display: none;
 }
 
 figure {
@@ -372,7 +443,7 @@ figcaption {
 
 .overlay {
     background-color: var(--main-dark-accent);
-}
+}*/
 
 
 
