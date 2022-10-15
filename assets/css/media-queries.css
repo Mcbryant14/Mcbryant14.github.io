@@ -9,21 +9,28 @@
 @media screen and (min-width: 0px) {
     .nav-links {display: none;}
     .nav-links span {display: none;}
-    .resume-link {border: 0; padding: 0; background-color: transparent;}
-    #inner-containers-one {flex-direction: column;}
-    #left-container {width: 100%;}
-    #right-container {display: none;}
-    #logo {display: none;}
     nav > ul {gap: 0; padding-right: 0;}
-    .introduction {font-size: 34px;}
-    .typing-text {font-size: 20px;}
-    .footer {padding: 0 1rem; font-size: 14px;}
+    #logo {display: none;}
+    #header-nav {border: 0; padding: 0; background-color: transparent;}
+    #inner-containers-one {flex-direction: column; margin: 0; gap: 0;}
+    #inner-containers-one h3 {font-size: 25px;}
+    li {font-size: 16px;}
+    .headshot-image, #container-two .my-image:after {display: none;}
+    .box {width: 95%; border-radius: 15px; border: 1px solid #E6ECF8;}
+    #skills-column {border-bottom: 1px solid #E6ECF8; padding-bottom: 2rem;}
+    #what-i-do-column {padding-top: 1rem;}
+    #skills-column ul, #what-i-do-column ul {padding-left: 1rem; margin: auto;}
+    #experience {padding: 1rem;}
+    #experience h3 {text-align: center;}
+    #work {padding: 1rem; gap: .5rem;}
+    #work h2 {font-size: 25px; margin-top: 1.5rem;}
+    #work h3 {text-align: center; font-size: 18px;}
     #column1 {display: none;}
+    .footer {padding: 0 1rem; font-size: 14px;}
 }
 
 @media screen and (min-width: 420px) {
-    .introduction {font-size: 38px;}
-    .typing-text {font-size: 27px;}
+    .resume-link {width: fit-content;}
 }
 
 @media screen and (min-width: 600px) {
@@ -31,14 +38,10 @@
     #nav-headshot {display: none;}
     #headshot {width: 10rem;}
     #logo {display: flex;}
-    #left-container {width: 70%;}
-    #right-container {width: 30%;}
-    .typing-text {font-size: 24px;}
     #column1 {display: initial;}
 }
 
 @media screen and (max-height: 550px) and (orientation: landscape) {
-    #left-container, #right-container {height: 100%;}
     #header-main-container {margin: 0 1rem;}
 }
 
@@ -47,10 +50,6 @@
 }
 
 @media screen and (min-width: 700px) {
-    #left-container {width: 60%;}
-    #right-container {width: 40%;}
-    .introduction {font-size: 42px;}
-    .typing-text {font-size: 26px;}
     #headshot {width: 218px; border: 2px dotted var(--accent-two);}
     #intro-container {margin-top: 9rem;}
     .intro-line-two {font-size: 50px;}
@@ -63,9 +62,6 @@
     .nav-links span {display: initial;}
     .resume-link {border: 1px solid var(--main-bg-color); padding: 10px; background-color: var(--accent-one);}
     #headshot {width: 15rem; width: 275px}
-    .introduction {font-size: 50px;}
-    .typing-text {font-size: 29px;}
-    #inner-containers-one {flex-direction: row; flex-wrap: wrap;}
 }
 
 @media screen and (min-width: 900px) {
@@ -75,25 +71,14 @@
 }
 
 @media screen and (min-width: 1000px) {
-    .introduction {font-size: 67px;}
-    .typing-container {margin-bottom: 1.25rem;}
-    .typing-text {font-size: 36px;}
     #headshot {width: 300px;}
 }
 
 @media screen and (min-width: 1300px) {
-    .introduction {font-size: 88px;}
-    .typing-text {font-size: 47px;}
-    #left-container {margin-left: 4rem;}
 }
 
 @media screen and (min-width: 1500px) {
     /*.skills-container {background-color: transparent; border: 0px;}*/
-    .skill .title {font-size: 21px;}
-    .skill-per .tooltip {font-size: 14px;}
-    .joke-heading {font-size: 27px;}
-    .joke-output, .punchline-output {font-size: 20px;}
-    .generator-button {font-size: 17px;}
     #intro-container {margin-top: 13rem;}
     .intro-line-two {font-size: 70px;}
     .intro-line-three {font-size: 60px;}
@@ -101,11 +86,7 @@
 
 @media screen and (min-width: 2000px) {
     #headshot {width: 500px;}
-    #header-main-container {}
-    .introduction {font-size: 100px;}
     #left-container {width: 50%;}
-    #right-container {width: 50%;}
-    .joke-container, .skills-container, {max-width: 48rem;}
     #intro-container {margin-top: 13rem;}
     .intro-line-one {font-size: 21px;}
     .intro-line-two {font-size: 80px;}

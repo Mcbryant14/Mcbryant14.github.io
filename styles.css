@@ -47,7 +47,7 @@ a:not(.normal-button):not(.special-button):not(.clear):hover {
 }
 
 a:-webkit-any-link {
-    color: unset;
+    color: var(--main-bg-color);
     cursor: pointer;
     text-decoration: none;
 }
@@ -67,8 +67,16 @@ header {
     margin: auto;
 }
 
-.has-display-flex {
+.has-flex {
     display: flex;
+}
+
+.has-row {
+    flex-direction: row;
+}
+
+.has-column {
+    flex-direction: column;
 }
 
 
@@ -133,10 +141,13 @@ nav > ul {
 
 .resume-link {
     border: 1px solid var(--main-bg-color);
-    border-radius: 3px;
+    border-radius: 10px;
     padding: 10px;
     color: var(--main-bg-color);
     background-color: var(--accent-one);
+    text-align: center;
+    margin: 1rem auto;
+    width: 85%
 }
 
 .hamburger {
@@ -246,7 +257,7 @@ dev.index.html
     flex-direction: column;
     justify-content: flex-start;
     margin: 3rem auto 0;
-    height: 86%;
+    height: 92%;
     max-height: 50rem; 
     width: 90%;
     max-width: 80rem;
@@ -354,8 +365,7 @@ dev.index.html
 #skills-column ul li, #what-i-do-column ul li {
     position: relative;
     padding: .35rem;
-    font-size: 18px;
-
+    /*font-size: 18px;*/
 }
 
 #skills-column ul li:before, #what-i-do-column ul li:before {
@@ -392,6 +402,7 @@ dev.index.html
 .headshot-image {
     border-radius: 5px;
     mix-blend-mode: hard-light;
+    min-width: 250px;
 }
 
 #container-two .my-image:after {
@@ -480,6 +491,7 @@ dev.index.html
     height: 100%;
     border-radius: 15px;
     filter: brightness(.98);
+    border: 1px solid var(--main-dark-accent);
 }
 
 figcaption {
@@ -522,6 +534,36 @@ figcaption:hover {
     text-decoration: none!important;
 }
 
+#contact {
+    height: 60vh;
+}
+
+.contact-container {
+    height: 20rem;
+    width: 95%;
+    position: relative;
+    top: 3rem;
+    margin: auto;
+    background-color: var(--main-bg-color);
+    border-radius: 15px;
+    border: 1px solid #E6ECF8;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-container h2 {
+    text-align: center;
+}
+
+.contact-container p {
+    padding: 0 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact-container a {
+    margin: 0 auto 0;
+}
 
 /*
 .joke-container {
