@@ -22,7 +22,7 @@
     #skills-column ul, #what-i-do-column ul {padding-left: 1rem; margin: auto;}
     #experience {padding: 1rem;}
     #experience h3 {text-align: center;}
-    #work {padding: 2rem; gap: .5rem;}
+    #work {padding: 2rem 2rem 3rem 2rem; gap: .5rem;}
     #work h2 {font-size: 25px; margin-top: 1.5rem;}
     #work h3 {text-align: center; font-size: 18px;}
     #column1 {display: none;}

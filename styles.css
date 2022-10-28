@@ -24,6 +24,10 @@ Global Styles
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ul {
     list-style: none;
 }
@@ -317,6 +321,7 @@ dev.index.html
     background-color: var(--main-bg-color);
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 #experience h2 {
@@ -408,7 +413,7 @@ dev.index.html
     position: relative;
     opacity: 1;
     background-color: var(--accent-one);
-    max-width: 15rem;
+    /*max-width: 15rem;*/
 }
 
 .headshot-image {
