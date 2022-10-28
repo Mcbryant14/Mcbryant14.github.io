@@ -46,7 +46,7 @@ a:not(.normal-button):not(.special-button):not(.clear):hover {
     text-decoration: underline;
 }
 
-a:-webkit-any-link {
+a:-webkit-any-link:not('#work h3 span') {
     color: var(--main-bg-color);
     cursor: pointer;
     text-decoration: none;
@@ -137,6 +137,10 @@ nav > ul {
 
 .nav-links li:hover {
     color: var(--accent-two);
+}
+
+#header-nav {
+    border: 1px solid var(--accent-one);
 }
 
 .resume-link {
@@ -346,6 +350,12 @@ dev.index.html
 
 #skills-column ul {
     margin-bottom: 2rem;
+    text-align: center;
+    padding-left: 0!important;
+}
+
+#skills-column ul li::before {
+   margin-left: 1rem;
 }
 
 #what-i-do-column {
@@ -389,14 +399,16 @@ dev.index.html
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: auto 14rem auto auto;
+    /*margin: auto 14rem auto auto;*/
     align-items: center;
+    padding: 1rem;
 }
 
 .my-image {
     position: relative;
     opacity: 1;
     background-color: var(--accent-one);
+    max-width: 15rem;
 }
 
 .headshot-image {
@@ -456,6 +468,10 @@ dev.index.html
 
 #work h3 {
     font-size: 25px;
+}
+
+#work h3 span {
+    color: var(--accent-one);
 }
 
 .email-me {
@@ -536,12 +552,14 @@ figcaption:hover {
 
 #contact {
     height: 60vh;
+    display: flex;
+    max-height: 28rem;
 }
 
 .contact-container {
     height: 20rem;
     width: 95%;
-    position: relative;
+    /*position: relative;*/
     top: 3rem;
     margin: auto;
     background-color: var(--main-bg-color);
@@ -549,6 +567,7 @@ figcaption:hover {
     border: 1px solid #E6ECF8;
     justify-content: center;
     gap: 1.5rem;
+    max-width: 35rem;
 }
 
 .contact-container h2 {
