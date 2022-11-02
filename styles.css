@@ -21,6 +21,7 @@ Global Styles
 
 .highlight {
     color: var(--accent-one);
+    font-weight: bold;
 }
 
 li {
