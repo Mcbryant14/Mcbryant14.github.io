@@ -17,6 +17,19 @@ Variables
 Global Styles
 ******************/
 
+/*test*/
+
+.highlight {
+    color: var(--accent-one);
+}
+
+li {
+    transition: .2s all ease;
+}
+
+li:hover {
+    cursor: pointer;
+}
 
 * {
     box-sizing: border-box;

@@ -22,6 +22,98 @@ const navLinks = document.querySelector('.nav-links');
 const navButton = document.querySelector('.hamburger');
 const header = document.querySelector('.header');
 const nav = document.querySelector('.main-navigation');
+//hover variables
+const skillHtml = document.getElementById('hover1');
+const skillCss = document.getElementById('hover2');
+const skillJavascript = document.getElementById('hover3');
+const skillJquery = document.getElementById('hover4');
+const skillWordpress = document.getElementById('hover5');
+const skillGit = document.getElementById('hover6');
+const skillSeo = document.getElementById('hover7');
+const skillUiux = document.getElementById('hover8');
+const skillResponsive = document.getElementById('hover9');
+
+const skill1 = document.getElementById('skill1');
+const skill2 = document.getElementById('skill2');
+const skill3 = document.getElementById('skill3');
+const skill4 = document.getElementById('skill4');
+const skill5 = document.getElementById('skill5');
+const skill6 = document.getElementById('skill6');
+const skill7 = document.getElementById('skill7');
+
+//hover functions
+
+//on hover html, apply hightlight class to skill 1, 2, 5
+
+/*skillHtml.addEventListener('onmouseenter', () => {
+  skill1.classList.add('hightlight');
+  console.log('oh hi');
+});*/
+
+$('#hover1').hover(function() {
+  $('#hover1').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
+$('#hover2').hover(function() {
+  $('#hover2').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+  $('#skill7').toggleClass('highlight');
+});
+
+$('#hover3').hover(function() {
+  $('#hover3').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
+$('#hover4').hover(function() {
+  $('#hover4').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
+$('#hover5').hover(function() {
+  $('#hover5').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+  $('#skill6').toggleClass('highlight');
+  $('#skill7').toggleClass('highlight');
+});
+
+$('#hover6').hover(function() {
+  $('#hover6').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
+$('#hover7').hover(function() {
+  $('#hover7').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
+$('#hover8').hover(function() {
+  $('#hover7').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
+$('#hover9').hover(function() {
+  $('#hover7').toggleClass('highlight');
+  $('#skill1').toggleClass('highlight');
+  $('#skill2').toggleClass('highlight');
+  $('#skill5').toggleClass('highlight');
+});
+
 
 /******************
  * ARRAYS
@@ -192,7 +284,7 @@ function showJokeButton() {
   }
 }
 
-/*EVENT LISTENERS*/
+/*EVENT LISTENERS
 
 makeMeLaughButton.addEventListener('click', () => {
   makeMeLaughButton.style.display = 'none';
@@ -201,9 +293,9 @@ makeMeLaughButton.addEventListener('click', () => {
   showJokeButton();
   $('.joke-heading').addClass('top-position');
   $('.joke-buttons').addClass('bottom-position');
-});
+});*/
 
-/*click joke button*/
+/*click joke button
 jokeButton.addEventListener('click', () => {
 
   getRandomJoke();
@@ -214,9 +306,9 @@ jokeButton.addEventListener('click', () => {
     hidePunchline();
   }
 
-});
+});*/
 
-/*click punchline button*/
+/*click punchline button
 punchButton.addEventListener('click', () => {
 
   punchlineOutput.innerHTML = punches[prevNumber];
@@ -225,7 +317,7 @@ punchButton.addEventListener('click', () => {
   showJokeButton();
   showPunchline();
 
-});
+});*/
 
 
 //when click punchline button, show punchline/hide punchline button/show joke button
