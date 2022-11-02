@@ -50,6 +50,8 @@ const skill7 = document.getElementById('skill7');
   console.log('oh hi');
 });*/
 
+//WHAT I KNOW HOVERS
+
 //1 2 7 8
 $('#hoverhtmlcss').hover(function() {
   $('#hoverhtmlcss').toggleClass('highlight');
@@ -99,7 +101,6 @@ $('#hoveruiux').hover(function() {
   $('#skill13').toggleClass('highlight');
   $('#skill3').toggleClass('highlight');
   $('#skill8').toggleClass('highlight');
-
 });
 // 4 9
 $('#hoverfigma').hover(function() {
@@ -114,6 +115,96 @@ $('#hoverdesign').hover(function() {
 
   $('#skill3').toggleClass('highlight');
   $('#skill8').toggleClass('highlight');
+});
+
+//WHAT I DO HOVERS
+
+$('#skill1').hover(function () {
+  $('#skill1').toggleClass('highlight');
+
+  $('#hoverhtmlcss').toggleClass('highlight');
+  $('#hoverjsjq').toggleClass('highlight');
+});
+
+$('#skill2').hover(function () {
+  $('#skill2').toggleClass('highlight');
+
+  $('#hoverhtmlcss').toggleClass('highlight');
+  $('#hoverwp').toggleClass('highlight');
+  $('#hoveruiux').toggleClass('highlight');
+});
+$('#skill3').hover(function () {
+  $('#skill3').toggleClass('highlight');
+
+  $('#hoverjsjq').toggleClass('highlight');
+  $('#hoveruiux').toggleClass('highlight');
+  $('#hoverdesign').toggleClass('highlight');
+});
+
+$('#skill4').hover(function () {
+  $('#skill4').toggleClass('highlight');
+
+  $('#hoverfigma').toggleClass('highlight');
+});
+
+$('#skill5').hover(function () {
+  $('#skill5').toggleClass('highlight');
+
+  $('#hoverwp').toggleClass('highlight');
+});
+
+$('#skill6').hover(function () {
+  $('#skill6').toggleClass('highlight');
+
+  $('#hoverwp').toggleClass('highlight');
+});
+
+$('#skill7').hover(function () {
+  $('#skill7').toggleClass('highlight');
+
+  $('#hoverhtmlcss').toggleClass('highlight');
+  $('#hoverjsjq').toggleClass('highlight');
+  $('#hoverwp').toggleClass('highlight');
+});
+
+$('#skill8').hover(function () {
+  $('#skill8').toggleClass('highlight');
+
+  $('#hoverhtmlcss').toggleClass('highlight');
+  $('#hoveruiux').toggleClass('highlight');
+  $('#hoverdesign').toggleClass('highlight');
+});
+
+$('#skill9').hover(function () {
+  $('#skill9').toggleClass('highlight');
+
+  $('#hoverwp').toggleClass('highlight');
+  $('#hovergit').toggleClass('highlight');
+  $('#hoverfigma').toggleClass('highlight');
+});
+
+$('#skill10').hover(function () {
+  $('#skill10').toggleClass('highlight');
+
+  $('#hovergit').toggleClass('highlight');
+});
+
+$('#skill11').hover(function () {
+  $('#skill11').toggleClass('highlight');
+
+  $('#hoverseo').toggleClass('highlight');
+});
+
+$('#skill12').hover(function () {
+  $('#skill12').toggleClass('highlight');
+
+  $('#hoverseo').toggleClass('highlight');
+});
+
+$('#skill13').hover(function () {
+  $('#skill13').toggleClass('highlight');
+
+  $('#hoveruiux').toggleClass('highlight');
 });
 
 
