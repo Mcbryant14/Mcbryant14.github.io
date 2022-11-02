@@ -12,7 +12,7 @@
     nav > ul {gap: 0; padding-right: 0;}
     #logo {display: none;}
     #header-nav {border: 0; padding: 0; background-color: transparent;}
-    #inner-containers-one {flex-direction: column; margin: 0; gap: 0;}
+    #inner-containers-one {flex-direction: column; margin: 0 3rem 1rem; gap: 0;}
     #inner-containers-one h3 {font-size: 25px;}
     li {font-size: 16px;}
     .headshot-image, #container-two .my-image:after {display: none;}
@@ -27,6 +27,7 @@
     #work h3 {text-align: center; font-size: 18px;}
     #column1 {display: none;}
     .footer {padding: 0 1rem; font-size: 14px;}
+    #container-two {display: none;}
 }
 
 @media screen and (min-width: 420px) {
@@ -88,6 +89,8 @@
 
 @media screen and (min-width: 1400px) {
     .headshot-image {display: flex; width: 12rem;}
+    #container-two {display: flex;}
+    #inner-containers-one {margin: 0 1rem 1rem; gap: 0;}
 }
 
 @media screen and (min-width: 1500px) {
@@ -95,9 +98,14 @@
     #intro-container {margin-top: 13rem;}
     .intro-line-two {font-size: 70px;}
     .intro-line-three {font-size: 60px;}
-    #container-two {margin-right: 4rem;}
+    #container-two {margin-right: 1rem;}
     #skills-column {margin-left: 2rem;}
     #experience {padding: 2rem;}
+}
+
+@media screen and (min-width: 1800px) {
+    .headshot-image {width: 21rem;}
+    #inner-containers-one {margin: 0 3rem 1rem;}
 }
 
 @media screen and (min-width: 2000px) {
@@ -108,4 +116,16 @@
     .intro-line-two {font-size: 80px;}
     .intro-line-three {font-size: 70px;}
     .intro-par {font-size: 23px;}
+    #inner-containers-one {margin: 0 5rem 2rem!important;}
+}
+
+@media screen and (min-width: 2200px) {
+    #headshot {width: 500px;}
+    #left-container {width: 50%;}
+    #intro-container {margin-top: 13rem;}
+    .intro-line-one {font-size: 21px;}
+    .intro-line-two {font-size: 80px;}
+    .intro-line-three {font-size: 70px;}
+    .intro-par {font-size: 23px;}
+    #inner-containers-one {margin: 0 7rem 2rem!important;}
 }
